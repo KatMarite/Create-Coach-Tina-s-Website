@@ -1,6 +1,42 @@
-import { BookOpen, Download, FileText, Star } from 'lucide-react';
+import { useState } from 'react';
+import { BookOpen, Download, FileText, Star, ShoppingBag, X } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from './ui/dialog';
 
 export function BooksResources() {
+  const [selectedBook, setSelectedBook] = useState<{
+    title: string;
+    price: string;
+    description: string;
+    image: string;
+  } | null>(null);
+
+  const books = [
+    {
+      title: 'Nashe-With-God Book',
+      price: 'R200,00',
+      description: 'A transformative spiritual journey guiding you towards a deeper connection and purpose.',
+      image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=800',
+    },
+    {
+      title: 'AteBelle Children’s Book',
+      price: 'R200,00',
+      description: 'Inspiring stories for the young at heart, teaching valuable life lessons through improved storytelling.',
+      image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=800',
+    },
+    {
+      title: 'Authentic Marketing Mastery',
+      price: 'R350,00',
+      description: 'Master the art of marketing with authenticity and impact, perfect for entrepreneurs and coaches.',
+      image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800',
+    },
+  ];
+
   const resources = [
     {
       type: 'Guide',
@@ -22,79 +58,70 @@ export function BooksResources() {
   return (
     <section id="books & resources" className="py-24 lg:py-32" style={{ backgroundColor: '#fafafa' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Featured Book Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-24">
-          {/* Left - Book Image */}
-          <div className="relative">
-            <div className="relative max-w-sm mx-auto">
-              <div className="aspect-[3/4] rounded-2xl shadow-2xl overflow-hidden bg-white">
+
+        {/* Books for Purchase Section */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-block px-4 py-1.5 rounded-full text-sm font-light tracking-wide mb-6" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
+            Books & Store
+          </div>
+          <h2
+            className="font-serif text-4xl md:text-5xl leading-tight mb-6"
+            style={{ color: 'var(--charcoal)' }}
+          >
+            Resources for Your Journey
+          </h2>
+          <p className="text-lg font-light" style={{ color: '#6b7280' }}>
+            Empower yourself with these carefully curated books designed to inspire growth and transformation.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 mb-24">
+          {books.map((book, index) => (
+            <div key={index} className="group flex flex-col h-full">
+              <div className="relative aspect-[3/4] mb-8 rounded-2xl overflow-hidden shadow-xl transition-all group-hover:shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1707142979946-a745d1d0092c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcGVuJTIwYm9vayUyMHJlYWRpbmclMjBjb2ZmZWV8ZW58MXx8fHwxNzcxNDIzODM2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Book Cover"
-                  className="w-full h-full object-cover"
+                  src={book.image}
+                  alt={book.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                <div className="absolute bottom-6 left-6 right-6 z-10">
+                  <button
+                    onClick={() => setSelectedBook(book)}
+                    className="w-full py-3 bg-white/90 backdrop-blur-sm rounded-none font-medium text-sm transition-transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 cursor-pointer hover:bg-white"
+                    style={{ color: 'var(--charcoal)' }}
+                  >
+                    View Details
+                  </button>
+                </div>
               </div>
-              <div
-                className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full opacity-20"
-                style={{ backgroundColor: 'var(--sage-green)' }}
-              />
-            </div>
-          </div>
 
-          {/* Right - Content */}
-          <div className="space-y-6">
-            <div className="inline-block px-4 py-1.5 rounded-full text-sm font-light tracking-wide" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
-              Bestselling Book
-            </div>
+              <div className="space-y-3 flex-1 flex flex-col">
+                <div className="flex justify-between items-start gap-4">
+                  <h3 className="font-serif text-2xl leading-tight" style={{ color: 'var(--charcoal)' }}>
+                    {book.title}
+                  </h3>
+                  <span className="font-medium text-lg whitespace-nowrap" style={{ color: 'var(--sage-green)' }}>
+                    {book.price}
+                  </span>
+                </div>
 
-            <h2
-              className="font-serif text-4xl md:text-5xl leading-tight"
-              style={{ color: 'var(--charcoal)' }}
-            >
-              Awakening Your Purpose
-            </h2>
+                <p className="text-sm font-light leading-relaxed line-clamp-2 mb-4" style={{ color: '#6b7280' }}>
+                  {book.description}
+                </p>
 
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-current" style={{ color: 'var(--sage-green)' }} />
-              ))}
-              <span className="ml-2 text-sm font-light" style={{ color: '#6b7280' }}>
-                4.9 out of 5 (2,847 reviews)
-              </span>
+                <div className="mt-auto pt-2">
+                  <button
+                    className="flex items-center gap-2 text-sm font-medium hover:underline"
+                    style={{ color: 'var(--charcoal)' }}
+                  >
+                    <ShoppingBag className="w-4 h-4" />
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
             </div>
-
-            <div className="space-y-4 text-base font-light leading-relaxed" style={{ color: '#6b7280' }}>
-              <p>
-                A transformative guide to discovering your unique purpose and creating a life that reflects your deepest values and aspirations.
-              </p>
-              <p>
-                In this powerful book, I share the proven framework I've used with hundreds of clients to help them break free from limiting beliefs, gain clarity on their path, and step into their fullest potential.
-              </p>
-            </div>
-
-            <div className="pt-4">
-              <blockquote className="border-l-4 pl-6 py-2 italic text-base font-light" style={{ borderColor: 'var(--sage-green)', color: '#4b5563' }}>
-                "This book changed my life. Coach Tina's wisdom and practical exercises helped me finally understand what I'm meant to do in this world."
-                <footer className="text-sm mt-2 not-italic" style={{ color: '#9ca3af' }}>— Sarah M., Reader</footer>
-              </blockquote>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button
-                className="px-8 py-4 rounded-none transition-all hover:shadow-xl hover:scale-105"
-                style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}
-              >
-                Order Now
-              </button>
-              <button
-                className="px-8 py-4 rounded-none border-2 transition-all hover:bg-white"
-                style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}
-              >
-                Read Sample Chapter
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Free Resources Section */}
@@ -144,6 +171,48 @@ export function BooksResources() {
             ))}
           </div>
         </div>
+
+        {/* Book Details Dialog */}
+        <Dialog open={!!selectedBook} onOpenChange={(open) => !open && setSelectedBook(null)}>
+          <DialogContent className="max-w-2xl p-0 overflow-hidden bg-white gap-0 border-none">
+            {selectedBook && (
+              <div className="flex flex-col md:flex-row h-full">
+                <div className="w-full md:w-2/5 relative h-64 md:h-auto">
+                  <img
+                    src={selectedBook.image}
+                    alt={selectedBook.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-full md:w-3/5 p-8 flex flex-col">
+                  <DialogHeader className="mb-4">
+                    <DialogTitle className="font-serif text-2xl mb-2" style={{ color: 'var(--charcoal)' }}>
+                      {selectedBook.title}
+                    </DialogTitle>
+                    <div className="text-xl font-medium" style={{ color: 'var(--sage-green)' }}>
+                      {selectedBook.price}
+                    </div>
+                  </DialogHeader>
+
+                  <DialogDescription className="text-base font-light leading-relaxed mb-8 flex-1" style={{ color: '#4b5563' }}>
+                    {selectedBook.description}
+                    <br /><br />
+                    Experience the profound impact of {selectedBook.title} and discover the tools you need to elevate your journey. This essential resource is designed to provide actionable insights and lasting value.
+                  </DialogDescription>
+
+                  <div className="mt-auto">
+                    <button
+                      className="w-full py-3.5 rounded-none font-medium text-white transition-all hover:shadow-lg hover:scale-[1.02]"
+                      style={{ backgroundColor: 'var(--sage-green)' }}
+                    >
+                      Add to Cart - {selectedBook.price}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
