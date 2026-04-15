@@ -60,7 +60,7 @@ export function Coaching() {
 
             <div className="pt-6">
               <button
-                className="px-8 py-4 rounded-none transition-all hover:shadow-xl hover:scale-105"
+                className="px-8 py-4 rounded-lg transition-all hover:shadow-xl hover:scale-105"
                 style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}
               >
                 Schedule Discovery Call

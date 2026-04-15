@@ -23,12 +23,13 @@ export function Navigation() {
               <a
                 href="#start-here"
                 className="relative group"
+                aria-current="page"
               >
-                <span className="text-sm font-light tracking-wide transition-colors hover:opacity-70" style={{ color: 'var(--charcoal)' }}>
+                <span className="text-sm font-semibold tracking-wide text-charcoal" style={{ color: 'var(--charcoal)' }}>
                   Start Here
                 </span>
                 <span
-                  className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
+                  className="absolute bottom-0 left-0 w-full h-0.5 transition-all duration-300"
                   style={{ backgroundColor: 'var(--sage-green)' }}
                 />
               </a>
@@ -144,10 +145,10 @@ export function Navigation() {
               </DropdownMenu>
 
               <button
-                className="px-6 py-2.5 rounded-none transition-all hover:shadow-lg hover:scale-105"
+                className="px-6 py-2.5 rounded-lg transition-all hover:shadow-lg hover:scale-105"
                 style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}
               >
-                Book / Contact
+                Contact
               </button>
             </div>
 

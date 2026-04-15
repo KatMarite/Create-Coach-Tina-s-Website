@@ -72,7 +72,7 @@ export function Podcast() {
 
             <div className="pt-4">
               <button
-                className="px-8 py-3 rounded-none transition-all hover:shadow-lg hover:scale-105"
+                className="px-8 py-3 rounded-lg transition-all hover:shadow-lg hover:scale-105"
                 style={{ backgroundColor: 'var(--charcoal)', color: 'white' }}
               >
                 View All Episodes

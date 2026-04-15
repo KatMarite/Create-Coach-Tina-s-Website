@@ -71,13 +71,13 @@ export function AuthenticallyWoman() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <button
-                className="px-8 py-4 rounded-none transition-all hover:shadow-xl hover:scale-105"
+                className="px-8 py-4 rounded-lg transition-all hover:shadow-xl hover:scale-105"
                 style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}
               >
                 Join the Waitlist
               </button>
               <button
-                className="px-8 py-4 rounded-none border-2 transition-all hover:bg-gray-50"
+                className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50"
                 style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}
               >
                 Download Info Guide

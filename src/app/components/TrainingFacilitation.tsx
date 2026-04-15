@@ -94,7 +94,7 @@ export function TrainingFacilitation() {
         {/* CTA */}
         <div className="text-center">
           <button
-            className="px-8 py-4 rounded-none transition-all hover:shadow-xl hover:scale-105"
+            className="px-8 py-4 rounded-lg transition-all hover:shadow-xl hover:scale-105"
             style={{ backgroundColor: 'var(--charcoal)', color: 'white' }}
           >
             Request a Proposal

@@ -88,7 +88,7 @@ export function BooksResources() {
                 <div className="absolute bottom-6 left-6 right-6 z-10">
                   <button
                     onClick={() => setSelectedBook(book)}
-                    className="w-full py-3 bg-white/90 backdrop-blur-sm rounded-none font-medium text-sm transition-transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 cursor-pointer hover:bg-white"
+                    className="w-full py-3 bg-white/90 backdrop-blur-sm rounded-lg font-medium text-sm transition-transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 cursor-pointer hover:bg-white"
                     style={{ color: 'var(--charcoal)' }}
                   >
                     View Details
@@ -202,7 +202,7 @@ export function BooksResources() {
 
                   <div className="mt-auto">
                     <button
-                      className="w-full py-3.5 rounded-none font-medium text-white transition-all hover:shadow-lg hover:scale-[1.02]"
+                      className="w-full py-3.5 rounded-lg font-medium text-white transition-all hover:shadow-lg hover:scale-[1.02]"
                       style={{ backgroundColor: 'var(--sage-green)' }}
                     >
                       Add to Cart - {selectedBook.price}
