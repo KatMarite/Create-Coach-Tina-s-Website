@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { BookOpen, Download, FileText, Star, ShoppingBag, X } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 import {
   Dialog,
   DialogContent,
@@ -9,6 +10,7 @@ import {
 } from './ui/dialog';
 
 export function BooksResources() {
+  const { addToCart } = useCart();
   const [selectedBook, setSelectedBook] = useState<{
     title: string;
     price: string;
@@ -112,6 +114,7 @@ export function BooksResources() {
 
                 <div className="mt-auto pt-2">
                   <button
+                    onClick={() => addToCart(book)}
                     className="flex items-center gap-2 text-sm font-medium hover:underline"
                     style={{ color: 'var(--charcoal)' }}
                   >
@@ -202,6 +205,10 @@ export function BooksResources() {
 
                   <div className="mt-auto">
                     <button
+                      onClick={() => {
+                        addToCart(selectedBook);
+                        setSelectedBook(null);
+                      }}
                       className="w-full py-3.5 rounded-lg font-medium text-white transition-all hover:shadow-lg hover:scale-[1.02]"
                       style={{ backgroundColor: 'var(--sage-green)' }}
                     >

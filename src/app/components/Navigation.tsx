@@ -1,3 +1,5 @@
+import { ShoppingBag } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -6,6 +8,9 @@ import {
 } from './ui/dropdown-menu';
 
 export function Navigation() {
+  const { items, toggleCart } = useCart();
+  const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100">
@@ -49,10 +54,10 @@ export function Navigation() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-64">
                   <DropdownMenuItem>
-                    <a href="#leadership-coaching" className="w-full">Leadership Coaching (1:1 / Executive / Women in leadership)</a>
+                    <a href="/coaching" className="w-full">Leadership Coaching (1:1 / Executive / Women in leadership)</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#corporate-training" className="w-full">Corporate Training & Facilitation</a>
+                    <a href="/training" className="w-full">Corporate Training & Facilitation</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <a href="#wellness-workshops" className="w-full">Wellness & Resilience Workshops</a>
@@ -80,11 +85,11 @@ export function Navigation() {
               </a>
 
               <a
-                href="#podcast"
+                href="/podcast"
                 className="relative group"
               >
                 <span className="text-sm font-light tracking-wide transition-colors hover:opacity-70" style={{ color: 'var(--charcoal)' }}>
-                  Podcast: Faith in Action
+                  Podcast
                 </span>
                 <span
                   className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
@@ -107,7 +112,7 @@ export function Navigation() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-48">
                   <DropdownMenuItem>
-                    <a href="#books" className="w-full">Books</a>
+                    <a href="/books" className="w-full">Books</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <a href="#free-tools" className="w-full">Free Tools / Downloads</a>
@@ -133,10 +138,10 @@ export function Navigation() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56">
                   <DropdownMenuItem>
-                    <a href="#empower-u" className="w-full">Empower U Kids & Teens</a>
+                    <a href="/empower-u" className="w-full">Empower U Kids & Teens</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#authentically-woman" className="w-full">Authentically Woman</a>
+                    <a href="/authentically-woman" className="w-full">Authentically Woman</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <a href="#lead-from-within" className="w-full">Lead From Within Framework</a>
@@ -150,9 +155,41 @@ export function Navigation() {
               >
                 Contact
               </button>
+
+              <button 
+                onClick={toggleCart}
+                className="relative p-2 transition-colors hover:opacity-70"
+                style={{ color: 'var(--charcoal)' }}
+                aria-label="View cart"
+              >
+                <ShoppingBag className="w-5 h-5" />
+                {cartItemCount > 0 && (
+                  <span 
+                    className="absolute top-0 right-0 transform translate-x-1/4 -translate-y-1/4 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-sm"
+                    style={{ backgroundColor: 'var(--terracotta)' }}
+                  >
+                    {cartItemCount}
+                  </span>
+                )}
+              </button>
             </div>
 
-            {/* Mobile Menu Button */}
+              <button 
+                onClick={toggleCart}
+                className="md:hidden relative p-2"
+                style={{ color: 'var(--charcoal)' }}
+              >
+                <ShoppingBag className="w-6 h-6" />
+                {cartItemCount > 0 && (
+                  <span 
+                    className="absolute top-1 right-1 transform text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-sm"
+                    style={{ backgroundColor: 'var(--terracotta)' }}
+                  >
+                    {cartItemCount}
+                  </span>
+                )}
+              </button>
+
             <button className="md:hidden p-2" aria-label="Menu">
               <svg
                 className="w-6 h-6"

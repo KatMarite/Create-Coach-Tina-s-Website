@@ -7,10 +7,18 @@ export const metadata: Metadata = {
   description: 'Transformational leadership coaching + practical tools for clarity, confidence & wholeness.',
 };
 
+import { CartProvider } from './context/CartContext';
+import { CartDrawer } from './components/CartDrawer';
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <CartProvider>
+          {children}
+          <CartDrawer />
+        </CartProvider>
+      </body>
     </html>
   );
 }
