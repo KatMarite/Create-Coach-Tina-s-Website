@@ -60,19 +60,19 @@ export function Navigation() {
                     <a href="/training" className="w-full">Corporate Training & Facilitation</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#wellness-workshops" className="w-full">Wellness & Resilience Workshops</a>
+                    <a href="/wellness-workshops" className="w-full">Wellness & Resilience Workshops</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#packages-retainers" className="w-full">Packages / Retainers</a>
+                    <a href="/packages-retainers" className="w-full">Packages / Retainers</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#testimonials" className="w-full">Testimonials / Results</a>
+                    <a href="/testimonials" className="w-full">Testimonials / Results</a>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
               <a
-                href="#speaking"
+                href="/speaking"
                 className="relative group"
               >
                 <span className="text-sm font-light tracking-wide transition-colors hover:opacity-70" style={{ color: 'var(--charcoal)' }}>
@@ -115,10 +115,10 @@ export function Navigation() {
                     <a href="/books" className="w-full">Books</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#free-tools" className="w-full">Free Tools / Downloads</a>
+                    <a href="/free-tools" className="w-full">Free Tools / Downloads</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#resources" className="w-full">Resources / Blog</a>
+                    <a href="/resources" className="w-full">Resources / Blog</a>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -144,17 +144,18 @@ export function Navigation() {
                     <a href="/authentically-woman" className="w-full">Authentically Woman</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="#lead-from-within" className="w-full">Lead From Within Framework</a>
+                    <a href="/lead-from-within" className="w-full">Lead From Within Framework</a>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <button
-                className="px-6 py-2.5 rounded-lg transition-all hover:shadow-lg hover:scale-105"
+              <a
+                href="/contact"
+                className="px-6 py-2.5 rounded-lg transition-all hover:shadow-lg hover:scale-105 block text-center"
                 style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}
               >
                 Contact
-              </button>
+              </a>
 
               <button 
                 onClick={toggleCart}
