@@ -2,16 +2,16 @@ import { useEffect, useState } from 'react';
 
 const heroImages = [
   {
-    src: 'https://images.unsplash.com/photo-1756699197303-e2badc2ae6df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBsaWZlJTIwY29hY2glMjB3b21hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MTQyMzcyOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    src: '/images/hero-2.jpg',
     alt: 'Coach Tina leading a coaching session',
   },
   {
-    src: 'https://images.unsplash.com/photo-1522202222549-5ed6c2c96dea?auto=format&fit=crop&w=1080&q=80',
+    src: '/images/hero-1.jpg',
     alt: 'Professional coaching consultation',
   },
   {
-    src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1080&q=80',
-    alt: 'Women in leadership discussion',
+    src: '/images/hero-3.jpeg',
+    alt: 'Coach Tina portrait',
   },
 ];
 

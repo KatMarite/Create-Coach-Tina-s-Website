@@ -1,5 +1,8 @@
+"use client";
+
 import { ShoppingBag } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { usePathname } from 'next/navigation';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,7 +12,11 @@ import {
 
 export function Navigation() {
   const { items, toggleCart } = useCart();
+  const pathname = usePathname();
   const cartItemCount = items.reduce((total, item) => total + item.quantity, 0);
+
+  const isActive = (path: string) => pathname === path;
+  const isDropdownActive = (paths: string[]) => paths.some(p => pathname?.startsWith(p));
 
   return (
     <>
@@ -26,29 +33,29 @@ export function Navigation() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <a
-                href="#start-here"
+                href="/"
                 className="relative group"
-                aria-current="page"
+                aria-current={isActive('/') ? 'page' : undefined}
               >
-                <span className="text-sm font-semibold tracking-wide text-charcoal" style={{ color: 'var(--charcoal)' }}>
+                <span className={`text-sm tracking-wide transition-colors hover:opacity-70 ${isActive('/') ? 'font-semibold' : 'font-light'}`} style={{ color: 'var(--charcoal)' }}>
                   Start Here
                 </span>
                 <span
-                  className="absolute bottom-0 left-0 w-full h-0.5 transition-all duration-300"
+                  className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${isActive('/') ? 'w-full' : 'w-0 group-hover:w-full'}`}
                   style={{ backgroundColor: 'var(--sage-green)' }}
                 />
               </a>
 
               <DropdownMenu>
                 <DropdownMenuTrigger className="relative group">
-                  <span className="text-sm font-light tracking-wide transition-colors hover:opacity-70 flex items-center gap-1" style={{ color: 'var(--charcoal)' }}>
+                  <span className={`text-sm tracking-wide transition-colors hover:opacity-70 flex items-center gap-1 ${isDropdownActive(['/coaching', '/training', '/wellness-workshops', '/packages-retainers', '/testimonials']) ? 'font-semibold' : 'font-light'}`} style={{ color: 'var(--charcoal)' }}>
                     Work With Coach Tina
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </span>
                   <span
-                    className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
+                    className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${isDropdownActive(['/coaching', '/training', '/wellness-workshops', '/packages-retainers', '/testimonials']) ? 'w-full' : 'w-0 group-hover:w-full'}`}
                     style={{ backgroundColor: 'var(--sage-green)' }}
                   />
                 </DropdownMenuTrigger>
@@ -75,11 +82,11 @@ export function Navigation() {
                 href="/speaking"
                 className="relative group"
               >
-                <span className="text-sm font-light tracking-wide transition-colors hover:opacity-70" style={{ color: 'var(--charcoal)' }}>
+                <span className={`text-sm tracking-wide transition-colors hover:opacity-70 ${isActive('/speaking') ? 'font-semibold' : 'font-light'}`} style={{ color: 'var(--charcoal)' }}>
                   Speaking
                 </span>
                 <span
-                  className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
+                  className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${isActive('/speaking') ? 'w-full' : 'w-0 group-hover:w-full'}`}
                   style={{ backgroundColor: 'var(--sage-green)' }}
                 />
               </a>
@@ -88,25 +95,25 @@ export function Navigation() {
                 href="/podcast"
                 className="relative group"
               >
-                <span className="text-sm font-light tracking-wide transition-colors hover:opacity-70" style={{ color: 'var(--charcoal)' }}>
+                <span className={`text-sm tracking-wide transition-colors hover:opacity-70 ${isActive('/podcast') ? 'font-semibold' : 'font-light'}`} style={{ color: 'var(--charcoal)' }}>
                   Podcast
                 </span>
                 <span
-                  className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
+                  className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${isActive('/podcast') ? 'w-full' : 'w-0 group-hover:w-full'}`}
                   style={{ backgroundColor: 'var(--sage-green)' }}
                 />
               </a>
 
               <DropdownMenu>
                 <DropdownMenuTrigger className="relative group">
-                  <span className="text-sm font-light tracking-wide transition-colors hover:opacity-70 flex items-center gap-1" style={{ color: 'var(--charcoal)' }}>
+                  <span className={`text-sm tracking-wide transition-colors hover:opacity-70 flex items-center gap-1 ${isDropdownActive(['/books', '/free-tools', '/resources']) ? 'font-semibold' : 'font-light'}`} style={{ color: 'var(--charcoal)' }}>
                     Books & Tools
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </span>
                   <span
-                    className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
+                    className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${isDropdownActive(['/books', '/free-tools', '/resources']) ? 'w-full' : 'w-0 group-hover:w-full'}`}
                     style={{ backgroundColor: 'var(--sage-green)' }}
                   />
                 </DropdownMenuTrigger>
@@ -125,14 +132,14 @@ export function Navigation() {
 
               <DropdownMenu>
                 <DropdownMenuTrigger className="relative group">
-                  <span className="text-sm font-light tracking-wide transition-colors hover:opacity-70 flex items-center gap-1" style={{ color: 'var(--charcoal)' }}>
+                  <span className={`text-sm tracking-wide transition-colors hover:opacity-70 flex items-center gap-1 ${isDropdownActive(['/empower-u', '/authentically-woman', '/lead-from-within']) ? 'font-semibold' : 'font-light'}`} style={{ color: 'var(--charcoal)' }}>
                     Programs
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </span>
                   <span
-                    className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
+                    className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${isDropdownActive(['/empower-u', '/authentically-woman', '/lead-from-within']) ? 'w-full' : 'w-0 group-hover:w-full'}`}
                     style={{ backgroundColor: 'var(--sage-green)' }}
                   />
                 </DropdownMenuTrigger>
