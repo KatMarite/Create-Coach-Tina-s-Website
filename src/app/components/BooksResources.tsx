@@ -23,19 +23,19 @@ export function BooksResources() {
       title: 'Nashe-With-God Book',
       price: 'R200,00',
       description: 'A transformative spiritual journey guiding you towards a deeper connection and purpose.',
-      image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=800',
+      image: '/images/book5.jpeg',
     },
     {
       title: 'AteBelle Children’s Book',
       price: 'R200,00',
       description: 'Inspiring stories for the young at heart, teaching valuable life lessons through improved storytelling.',
-      image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=800',
+      image: '/images/book3.png',
     },
     {
       title: 'Authentic Marketing Mastery',
       price: 'R350,00',
       description: 'Master the art of marketing with authenticity and impact, perfect for entrepreneurs and coaches.',
-      image: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800',
+      image: '/images/book4.jpeg',
     },
   ];
 
