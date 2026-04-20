@@ -27,21 +27,21 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="start-here" className="min-h-screen flex items-center pt-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 w-full">
+    <section id="start-here" className="min-h-screen flex items-center pt-24 sm:pt-28 md:pt-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 md:py-20 w-full">
         {/* Hero Section */}
         <FadeIn>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-12 sm:mb-16 md:mb-20">
           {/* Left - Text Content */}
           <div className="space-y-8">
             <div className="space-y-6">
               <h1
-                className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight"
+                className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight"
                 style={{ color: 'var(--charcoal)' }}
               >
                 Reset. Realign. Rise.
               </h1>
-              <p className="text-xl md:text-2xl font-light leading-relaxed max-w-xl" style={{ color: '#374151' }}>
+              <p className="text-base sm:text-xl md:text-2xl font-light leading-relaxed max-w-xl" style={{ color: '#374151' }}>
                 Transformational leadership coaching + practical tools for clarity, confidence & wholeness.
               </p>
             </div>
@@ -87,9 +87,9 @@ export function Hero() {
 
         {/* As Seen / Trusted By */}
         <FadeIn>
-        <div className="text-center mb-20">
-          <p className="text-sm font-light mb-8" style={{ color: '#374151' }}>As Seen & Trusted By</p>
-          <div className="flex justify-center items-center gap-10 md:gap-16 flex-wrap opacity-60">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <p className="text-sm font-light mb-6 sm:mb-8" style={{ color: '#374151' }}>As Seen & Trusted By</p>
+          <div className="flex justify-center items-center gap-6 sm:gap-10 md:gap-16 flex-wrap opacity-60">
             <img 
               src="/images/logos/truworths.png" 
               alt="Truworths" 
@@ -119,8 +119,8 @@ export function Hero() {
 
         {/* Meet Coach Tina */}
         <FadeIn>
-        <div className="bg-gray-50 p-12 md:p-16 rounded-2xl mb-20 shadow-sm border border-gray-200">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+        <div className="bg-gray-50 p-6 sm:p-10 md:p-16 rounded-2xl mb-12 sm:mb-16 md:mb-20 shadow-sm border border-gray-200">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
             {/* Image Side */}
             <div className="relative">
               <div className="aspect-[4/5] max-w-md mx-auto lg:max-w-none overflow-hidden rounded-xl shadow-lg relative z-10">
@@ -138,10 +138,10 @@ export function Hero() {
             
             {/* Text Side */}
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 leading-tight" style={{ color: 'var(--charcoal)' }}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-4 sm:mb-6 leading-tight" style={{ color: 'var(--charcoal)' }}>
                 Meet Coach Tina
               </h2>
-              <div className="space-y-6 text-lg font-light leading-relaxed" style={{ color: '#374151' }}>
+              <div className="space-y-4 sm:space-y-6 text-base sm:text-lg font-light leading-relaxed" style={{ color: '#374151' }}>
                 <p>
                   With over a decade of experience bridging the gap between personal wholeness and professional excellence, I am deeply committed to helping leaders find their authentic voice.
                 </p>
@@ -161,16 +161,16 @@ export function Hero() {
 
         {/* Services Section */}
         <FadeIn>
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif mb-4" style={{ color: 'var(--charcoal)' }}>
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4" style={{ color: 'var(--charcoal)' }}>
               Core Services
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#374151' }}>
+            <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#374151' }}>
               Tailored coaching and training designed to elevate your leadership, team, and organization.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {/* Leadership Coaching */}
             <div className="bg-white group rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden flex flex-col">
               <div className="aspect-[4/3] overflow-hidden">
@@ -231,41 +231,41 @@ export function Hero() {
 
         {/* Empower U Feature */}
         <FadeIn>
-        <div className="p-12 md:p-16 rounded-2xl mb-20 shadow-lg text-white" style={{ backgroundColor: 'var(--sage-green)' }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-            <div className="space-y-6">
+        <div className="p-6 sm:p-10 md:p-16 rounded-2xl mb-12 sm:mb-16 md:mb-20 shadow-lg text-white" style={{ backgroundColor: 'var(--sage-green)' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+            <div className="space-y-4 sm:space-y-6">
               <div className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold tracking-wider uppercase mb-2 bg-white/20">
                 Youth Program
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif leading-tight">
                 Empower U: Equipping the Next Generation
               </h2>
-              <p className="text-lg text-white/90 font-light leading-relaxed">
+              <p className="text-base sm:text-lg text-white/90 font-light leading-relaxed">
                 Empower U is a specialized coaching program designed for kids and teens. We provide young minds with the essential tools to build confidence, develop emotional intelligence, and lead themselves before they lead others.
               </p>
-              <ul className="space-y-4 pt-4">
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <ul className="space-y-3 sm:space-y-4 pt-2 sm:pt-4">
+                <li className="flex items-start text-sm sm:text-base">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Build unshakeable self-confidence & self-worth</span>
                 </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-sm sm:text-base">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Develop healthy emotional regulation strategies</span>
                 </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-sm sm:text-base">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Learn essential soft skills for the modern world</span>
                 </li>
               </ul>
-              <div className="pt-8">
+              <div className="pt-4 sm:pt-8">
                 <button 
-                  className="px-8 py-4 rounded-lg border-2 font-medium transition-all hover:bg-white/10" 
+                  className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg border-2 font-medium transition-all hover:bg-white/10 text-sm sm:text-base" 
                   style={{ borderColor: 'white', color: 'white' }}
                 >
                   Discover Empower U
@@ -273,7 +273,7 @@ export function Hero() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative z-10 hidden md:block">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative z-10">
                 <img
                   src="/images/empower-u.png"
                   alt="Happy kids participating in Empower U program"
@@ -288,10 +288,10 @@ export function Hero() {
 
         {/* Podcast Spotlight */}
         <FadeIn>
-        <div className="bg-gray-50 p-12 rounded-2xl mb-20">
+        <div className="bg-gray-50 p-6 sm:p-10 md:p-12 rounded-2xl mb-12 sm:mb-16 md:mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-serif mb-6" style={{ color: 'var(--charcoal)' }}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 sm:mb-6" style={{ color: 'var(--charcoal)' }}>
                 Faith in Action Podcast
               </h2>
               <p className="text-lg mb-6" style={{ color: '#374151' }}>
@@ -326,11 +326,11 @@ export function Hero() {
         </div>
 
         {/* Books */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12" style={{ color: 'var(--charcoal)' }}>
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-center mb-8 sm:mb-12" style={{ color: 'var(--charcoal)' }}>
             Books & Resources
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="aspect-[3/4] overflow-hidden rounded-lg mb-4 max-w-xs mx-auto">
                 <img
@@ -377,11 +377,11 @@ export function Hero() {
         </div>
 
         {/* Testimonials */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12" style={{ color: 'var(--charcoal)' }}>
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-center mb-8 sm:mb-12" style={{ color: 'var(--charcoal)' }}>
             Real Results, Real Lives
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full mr-4 flex items-center justify-center text-white font-semibold text-lg" style={{ backgroundColor: 'var(--sage-green)' }}>
@@ -434,20 +434,20 @@ export function Hero() {
 
         {/* Newsletter / Community */}
         <FadeIn>
-        <div className="bg-gray-50 p-12 rounded-2xl mb-20 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif mb-6" style={{ color: 'var(--charcoal)' }}>
+        <div className="bg-gray-50 p-6 sm:p-10 md:p-12 rounded-2xl mb-12 sm:mb-16 md:mb-20 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 sm:mb-6" style={{ color: 'var(--charcoal)' }}>
             Get My Weekly Reset + Tools
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: '#374151' }}>
+          <p className="text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto" style={{ color: '#374151' }}>
             Join thousands who start their week with intention, clarity, and practical tools for personal growth.
           </p>
-          <div className="max-w-md mx-auto flex gap-4">
+          <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-3 sm:gap-4">
             <input
               type="email"
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-500"
             />
-            <button className="px-6 py-3 rounded-lg transition-all hover:shadow-lg" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
+            <button className="px-6 py-3 rounded-lg transition-all hover:shadow-lg whitespace-nowrap" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
               Subscribe
             </button>
           </div>
@@ -458,17 +458,17 @@ export function Hero() {
         {/* Final CTA */}
         <FadeIn>
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-serif mb-6" style={{ color: 'var(--charcoal)' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif mb-4 sm:mb-6" style={{ color: 'var(--charcoal)' }}>
             Ready to Transform Your Leadership?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: '#374151' }}>
+          <p className="text-base sm:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto" style={{ color: '#374151' }}>
             Book a discovery call to discuss your goals and see if we're a great fit to work together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 rounded-lg transition-all hover:shadow-xl hover:scale-105 text-lg" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
+            <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all hover:shadow-xl hover:scale-105 text-base sm:text-lg" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
               Book Coach Tina
             </button>
-            <button className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-lg" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
+            <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-base sm:text-lg" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
               Corporate Enquiries
             </button>
           </div>

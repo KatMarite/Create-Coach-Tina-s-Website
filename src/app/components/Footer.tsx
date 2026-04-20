@@ -3,14 +3,14 @@ import { Mail, Instagram, Linkedin, Youtube } from 'lucide-react';
 export function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-10 sm:py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12">
           {/* Brand */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="sm:col-span-2 space-y-4">
             <img 
               src="/images/logo.png" 
               alt="Coach Tina Logo" 
-              className="h-24 md:h-32 w-auto object-contain -ml-2" 
+              className="h-20 sm:h-24 md:h-32 w-auto object-contain -ml-2" 
             />
             <p className="text-sm font-light max-w-md leading-relaxed" style={{ color: '#374151' }}>
               Empowering individuals to discover their purpose, unlock their potential, and create lives that truly matter.

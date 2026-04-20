@@ -21,10 +21,10 @@ export function AuthenticallyWoman() {
   ];
 
   return (
-    <section id="authentically woman" className="py-24 lg:py-32 bg-white">
+    <section id="authentically woman" className="py-16 sm:py-20 lg:py-32 bg-white">
       <FadeIn>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24 items-center mb-12 sm:mb-16 md:mb-20">
           {/* Left - Content */}
           <div className="space-y-6">
             <div className="inline-block px-4 py-1.5 rounded-full text-sm font-light tracking-wide" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
@@ -32,13 +32,13 @@ export function AuthenticallyWoman() {
             </div>
 
             <h2
-              className="font-serif text-4xl md:text-5xl leading-tight"
+              className="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight"
               style={{ color: 'var(--charcoal)' }}
             >
               Authentically Woman
             </h2>
 
-            <p className="text-xl font-light leading-relaxed" style={{ color: '#4b5563' }}>
+            <p className="text-lg sm:text-xl font-light leading-relaxed" style={{ color: '#4b5563' }}>
               A sacred space for women to shed expectations, embrace their truth, and step into their power.
             </p>
 
@@ -51,7 +51,7 @@ export function AuthenticallyWoman() {
               </p>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl p-6 mt-8">
+            <div className="bg-gray-50 rounded-2xl p-5 sm:p-6 mt-8">
               <h4 className="font-serif text-lg mb-4" style={{ color: 'var(--charcoal)' }}>This Program is For You If:</h4>
               <ul className="space-y-3">
                 {[
@@ -98,7 +98,7 @@ export function AuthenticallyWoman() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
             <div
-              className="absolute -top-6 -left-6 w-40 h-40 rounded-full opacity-10"
+              className="hidden sm:block absolute -top-6 -left-6 w-40 h-40 rounded-full opacity-10"
               style={{ backgroundColor: 'var(--sage-green)' }}
             />
           </div>
@@ -107,13 +107,13 @@ export function AuthenticallyWoman() {
         {/* Three Pillars */}
         <div>
           <h3
-            className="font-serif text-3xl text-center mb-12"
+            className="font-serif text-2xl sm:text-3xl text-center mb-8 sm:mb-12"
             style={{ color: 'var(--charcoal)' }}
           >
             Three Pillars of Transformation
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-10">
             {pillars.map((pillar, index) => {
               const Icon = pillar.icon;
               return (
@@ -128,7 +128,7 @@ export function AuthenticallyWoman() {
                     <Icon className="w-8 h-8" style={{ color: 'var(--sage-green)' }} />
                   </div>
 
-                  <h4 className="font-serif text-2xl mb-4" style={{ color: 'var(--charcoal)' }}>
+                  <h4 className="font-serif text-xl sm:text-2xl mb-4" style={{ color: 'var(--charcoal)' }}>
                     {pillar.title}
                   </h4>
 

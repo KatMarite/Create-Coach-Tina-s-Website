@@ -77,15 +77,15 @@ export function LeadFromWithin() {
             </div>
           </div>
 
-          <div className="lg:order-1 relative h-full min-h-[500px]">
-             <div className="sticky top-32">
+          <div className="lg:order-1 relative h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[500px]">
+             <div className="lg:sticky lg:top-32">
                <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl relative">
                  <img 
                    src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                    alt="Framework Visualization" 
                    className="w-full h-full object-cover"
                  />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-10">
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 sm:p-10">
                    <p className="text-white font-serif text-2xl leading-relaxed italic">
                      "You cannot lead others to a place you haven't been willing to go yourself."
                    </p>
@@ -93,7 +93,7 @@ export function LeadFromWithin() {
                </div>
                
                {/* Decorative Element */}
-               <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full mix-blend-multiply filter blur-xl opacity-70" style={{ backgroundColor: 'var(--sage-green)' }}></div>
+               <div className="hidden lg:block absolute -top-10 -right-10 w-40 h-40 rounded-full mix-blend-multiply filter blur-xl opacity-70" style={{ backgroundColor: 'var(--sage-green)' }}></div>
              </div>
           </div>
 

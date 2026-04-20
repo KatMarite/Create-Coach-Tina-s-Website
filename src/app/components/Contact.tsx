@@ -42,14 +42,14 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-gray-50">
+    <section id="contact" className="py-16 sm:py-20 lg:py-32 bg-gray-50">
       <FadeIn>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="text-center mb-10 sm:mb-16">
           <div className="inline-block px-4 py-1.5 rounded-full text-sm font-light tracking-wide mb-4" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
             Get In Touch
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl" style={{ color: 'var(--charcoal)' }}>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl" style={{ color: 'var(--charcoal)' }}>
             Let's Start Your Journey
           </h2>
           <p className="mt-4 text-lg font-light max-w-2xl mx-auto" style={{ color: '#4b5563' }}>
@@ -57,7 +57,7 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 item-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 item-center">
           {/* Contact Information */}
           <div className="space-y-8">
             <h3 className="font-serif text-2xl" style={{ color: 'var(--charcoal)' }}>Contact Information</h3>
@@ -94,7 +94,7 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-2xl shadow-xl">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-xl">
             <form onSubmit={onSubmit} className="space-y-6">
               <input type="hidden" name="subject" value="New Submission from Coach Tina Website" />
               

@@ -73,11 +73,11 @@ export function Speaking() {
               />
             </div>
             {/* Decorative block */}
-            <div className="absolute -bottom-8 -left-8 w-48 h-48 rounded-3xl -z-10" style={{ backgroundColor: 'var(--sage-green)', opacity: 0.2 }} />
+            <div className="hidden md:block absolute -bottom-8 -left-8 w-48 h-48 rounded-3xl -z-10" style={{ backgroundColor: 'var(--sage-green)', opacity: 0.2 }} />
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-10 lg:p-16 shadow-lg border border-gray-200">
+        <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-16 shadow-lg border border-gray-200">
           <h3 className="font-serif text-3xl mb-12 text-center" style={{ color: 'var(--charcoal)' }}>Signature Keynote Topics</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {topics.map((topic, i) => (
