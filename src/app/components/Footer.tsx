@@ -2,7 +2,7 @@ import { Mail, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-100">
+    <footer className="bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
@@ -10,7 +10,7 @@ export function Footer() {
             <h3 className="font-serif text-2xl" style={{ color: 'var(--charcoal)' }}>
               Coach Tina
             </h3>
-            <p className="text-sm font-light max-w-md leading-relaxed" style={{ color: '#6b7280' }}>
+            <p className="text-sm font-light max-w-md leading-relaxed" style={{ color: '#374151' }}>
               Empowering individuals to discover their purpose, unlock their potential, and create lives that truly matter.
             </p>
             <div className="flex gap-4 pt-2">
@@ -40,7 +40,7 @@ export function Footer() {
                   <a
                     href={`#${link.toLowerCase()}`}
                     className="text-sm font-light hover:opacity-70 transition-opacity"
-                    style={{ color: '#6b7280' }}
+                    style={{ color: '#374151' }}
                   >
                     {link}
                   </a>
@@ -59,7 +59,7 @@ export function Footer() {
                 <a
                   href="mailto:hello@coachtina.com"
                   className="text-sm font-light hover:opacity-70 transition-opacity"
-                  style={{ color: '#6b7280' }}
+                  style={{ color: '#374151' }}
                 >
                   hello@coachtina.com
                 </a>
@@ -68,7 +68,7 @@ export function Footer() {
                 <a
                   href="#"
                   className="text-sm font-light hover:opacity-70 transition-opacity"
-                  style={{ color: '#6b7280' }}
+                  style={{ color: '#374151' }}
                 >
                   Schedule a Call
                 </a>
@@ -77,7 +77,7 @@ export function Footer() {
                 <a
                   href="#"
                   className="text-sm font-light hover:opacity-70 transition-opacity"
-                  style={{ color: '#6b7280' }}
+                  style={{ color: '#374151' }}
                 >
                   Newsletter
                 </a>
@@ -87,7 +87,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm font-light" style={{ color: '#9ca3af' }}>
             © 2026 Coach Tina. All rights reserved.
           </p>

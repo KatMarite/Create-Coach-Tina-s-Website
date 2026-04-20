@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { FadeIn } from './FadeIn';
 import { Eye, HeartHandshake, Compass, Zap } from 'lucide-react';
 
 export function LeadFromWithin() {
@@ -29,6 +30,7 @@ export function LeadFromWithin() {
 
   return (
     <section className="py-24 lg:py-32 bg-white">
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
@@ -97,6 +99,7 @@ export function LeadFromWithin() {
 
         </div>
       </div>
+    </FadeIn>
     </section>
   );
 }

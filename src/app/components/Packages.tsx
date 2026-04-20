@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { FadeIn } from './FadeIn';
 import { Check } from 'lucide-react';
 
 export function Packages() {
@@ -47,6 +48,7 @@ export function Packages() {
 
   return (
     <section className="py-24 lg:py-32 bg-gray-50">
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="font-serif text-4xl md:text-5xl mb-6" style={{ color: 'var(--charcoal)' }}>
@@ -65,7 +67,7 @@ export function Packages() {
               className={`rounded-2xl p-8 relative flex flex-col h-full bg-white transition-all
                 ${pkg.highlighted 
                   ? 'shadow-2xl border-2 scale-100 md:scale-105 z-10' 
-                  : 'shadow border border-gray-100'}`}
+                  : 'shadow border border-gray-200'}`}
               style={pkg.highlighted ? { borderColor: 'var(--sage-green)' } : {}}
             >
               {pkg.highlighted && (
@@ -109,6 +111,7 @@ export function Packages() {
           ))}
         </div>
       </div>
+    </FadeIn>
     </section>
   );
 }

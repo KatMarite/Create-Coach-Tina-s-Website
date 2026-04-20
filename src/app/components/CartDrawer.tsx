@@ -82,7 +82,7 @@ export function CartDrawer() {
       
       <div className="fixed top-0 right-0 h-full w-full sm:w-[450px] bg-white shadow-2xl z-[70] transform transition-transform flex flex-col">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-100">
+        <div className="flex items-center justify-between p-6 border-b border-gray-200">
           {checkoutStep ? (
             <button 
               onClick={() => setCheckoutStep(false)}
@@ -175,7 +175,7 @@ export function CartDrawer() {
 
             {/* Footer */}
             {items.length > 0 && (
-              <div className="p-6 border-t border-gray-100 bg-gray-50">
+              <div className="p-6 border-t border-gray-200 bg-gray-50">
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-medium" style={{ color: 'var(--charcoal)' }}>Subtotal</span>
                   <span className="font-serif text-xl" style={{ color: 'var(--sage-green)' }}>
@@ -236,7 +236,7 @@ export function CartDrawer() {
                 </div>
               </div>
 
-              <div className="p-6 border-t border-gray-100 bg-gray-50">
+              <div className="p-6 border-t border-gray-200 bg-gray-50">
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-medium" style={{ color: 'var(--charcoal)' }}>Total to Pay</span>
                   <span className="font-serif text-xl" style={{ color: 'var(--sage-green)' }}>

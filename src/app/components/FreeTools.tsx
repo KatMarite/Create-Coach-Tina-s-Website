@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { FadeIn } from './FadeIn';
 import { Download, FileText, CheckCircle2 } from 'lucide-react';
 
 export function FreeTools() {
@@ -27,6 +28,7 @@ export function FreeTools() {
 
   return (
     <section className="py-24 lg:py-32 bg-white">
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
           <div className="inline-block px-4 py-1.5 rounded-full text-sm font-light tracking-wide bg-blue-50 text-blue-700">
@@ -43,7 +45,7 @@ export function FreeTools() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tools.map((tool, idx) => (
-            <div key={idx} className="bg-gray-50 rounded-3xl overflow-hidden hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full">
+            <div key={idx} className="bg-gray-50 rounded-3xl overflow-hidden hover:shadow-xl transition-shadow border border-gray-200 flex flex-col h-full">
               <div className="h-48 relative">
                 <img src={tool.image} alt={tool.title} className="w-full h-full object-cover" />
                 <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full flex items-center gap-2 text-xs font-medium text-gray-800">
@@ -73,6 +75,7 @@ export function FreeTools() {
           ))}
         </div>
       </div>
+    </FadeIn>
     </section>
   );
 }

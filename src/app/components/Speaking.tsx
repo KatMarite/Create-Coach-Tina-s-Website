@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { FadeIn } from './FadeIn';
 import { Mic, Globe, Users, Target } from 'lucide-react';
 
 export function Speaking() {
@@ -21,6 +22,7 @@ export function Speaking() {
 
   return (
     <section className="py-24 lg:py-32 bg-gray-50">
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-24">
           <div>
@@ -75,7 +77,7 @@ export function Speaking() {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-10 lg:p-16 shadow-lg border border-gray-100">
+        <div className="bg-white rounded-3xl p-10 lg:p-16 shadow-lg border border-gray-200">
           <h3 className="font-serif text-3xl mb-12 text-center" style={{ color: 'var(--charcoal)' }}>Signature Keynote Topics</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {topics.map((topic, i) => (
@@ -90,6 +92,7 @@ export function Speaking() {
           </div>
         </div>
       </div>
+    </FadeIn>
     </section>
   );
 }

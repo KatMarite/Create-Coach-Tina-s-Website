@@ -40,9 +40,9 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   
-  /* Custom brand colors */
-  --sage-green: #5d7963;
-  --charcoal: #2d3436;
+  /* Custom brand colors - High Contrast Update */
+  --sage-green: #2a5934; /* Deepened from #5d7963 */
+  --charcoal: #111827; /* Deepened from #2d3436 */
 }
 
 .dark {

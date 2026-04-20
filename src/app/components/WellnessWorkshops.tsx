@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { FadeIn } from './FadeIn';
 import { HeartPulse, Brain, BatteryCharging, ShieldCheck } from 'lucide-react';
 
 export function WellnessWorkshops() {
@@ -29,6 +30,7 @@ export function WellnessWorkshops() {
 
   return (
     <section className="py-24 lg:py-32 bg-white">
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Hero Section */}
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
@@ -50,7 +52,7 @@ export function WellnessWorkshops() {
           {offerings.map((offering, idx) => {
             const Icon = offering.icon;
             return (
-              <div key={idx} className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow border border-gray-100">
+              <div key={idx} className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg transition-shadow border border-gray-200">
                 <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: 'white', color: 'var(--sage-green)' }}>
                   <Icon className="w-7 h-7" />
                 </div>
@@ -90,6 +92,7 @@ export function WellnessWorkshops() {
           </div>
         </div>
       </div>
+    </FadeIn>
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import { FadeIn } from './FadeIn';
 import { useState } from 'react';
 import { BookOpen, Download, FileText, Star, ShoppingBag, X } from 'lucide-react';
 import { useCart } from '../context/CartContext';
@@ -59,6 +60,7 @@ export function BooksResources() {
 
   return (
     <section id="books & resources" className="py-24 lg:py-32" style={{ backgroundColor: '#fafafa' }}>
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* Books for Purchase Section */}
@@ -72,7 +74,7 @@ export function BooksResources() {
           >
             Resources for Your Journey
           </h2>
-          <p className="text-lg font-light" style={{ color: '#6b7280' }}>
+          <p className="text-lg font-light" style={{ color: '#374151' }}>
             Empower yourself with these carefully curated books designed to inspire growth and transformation.
           </p>
         </div>
@@ -108,7 +110,7 @@ export function BooksResources() {
                   </span>
                 </div>
 
-                <p className="text-sm font-light leading-relaxed line-clamp-2 mb-4" style={{ color: '#6b7280' }}>
+                <p className="text-sm font-light leading-relaxed line-clamp-2 mb-4" style={{ color: '#374151' }}>
                   {book.description}
                 </p>
 
@@ -136,7 +138,7 @@ export function BooksResources() {
             >
               Free Resources
             </h3>
-            <p className="text-lg font-light" style={{ color: '#6b7280' }}>
+            <p className="text-lg font-light" style={{ color: '#374151' }}>
               Download these complimentary tools to support your personal growth journey
             </p>
           </div>
@@ -145,7 +147,7 @@ export function BooksResources() {
             {resources.map((resource, index) => (
               <div
                 key={index}
-                className="border-2 border-gray-100 rounded-2xl p-6 hover:border-current hover:shadow-lg transition-all group cursor-pointer"
+                className="border-2 border-gray-200 rounded-2xl p-6 hover:border-current hover:shadow-lg transition-all group cursor-pointer"
               >
                 <div
                   className="w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
@@ -162,7 +164,7 @@ export function BooksResources() {
                   {resource.title}
                 </h4>
 
-                <p className="text-sm font-light mb-4 leading-relaxed" style={{ color: '#6b7280' }}>
+                <p className="text-sm font-light mb-4 leading-relaxed" style={{ color: '#374151' }}>
                   {resource.description}
                 </p>
 
@@ -221,6 +223,7 @@ export function BooksResources() {
           </DialogContent>
         </Dialog>
       </div>
+    </FadeIn>
     </section>
   );
 }

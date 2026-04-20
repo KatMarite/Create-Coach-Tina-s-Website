@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { FadeIn } from './FadeIn';
 
 const heroImages = [
   {
@@ -29,6 +30,7 @@ export function Hero() {
     <section id="start-here" className="min-h-screen flex items-center pt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 w-full">
         {/* Hero Section */}
+        <FadeIn>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
           {/* Left - Text Content */}
           <div className="space-y-8">
@@ -39,7 +41,7 @@ export function Hero() {
               >
                 Reset. Realign. Rise.
               </h1>
-              <p className="text-xl md:text-2xl font-light leading-relaxed max-w-xl" style={{ color: '#6b7280' }}>
+              <p className="text-xl md:text-2xl font-light leading-relaxed max-w-xl" style={{ color: '#374151' }}>
                 Transformational leadership coaching + practical tools for clarity, confidence & wholeness.
               </p>
             </div>
@@ -80,186 +82,219 @@ export function Hero() {
             </div>
           </div>
         </div>
+        </FadeIn>
+
 
         {/* As Seen / Trusted By */}
+        <FadeIn>
         <div className="text-center mb-20">
-          <p className="text-sm font-light mb-8" style={{ color: '#6b7280' }}>As Seen & Trusted By</p>
-          <div className="flex justify-center items-center gap-8 opacity-60">
-            {/* Placeholder logos - replace with actual client logos */}
-            <div className="text-lg font-semibold" style={{ color: 'var(--charcoal)' }}>Corporate Clients</div>
-            <div className="text-lg font-semibold" style={{ color: 'var(--charcoal)' }}>NGO Partners</div>
-            <div className="text-lg font-semibold" style={{ color: 'var(--charcoal)' }}>Media Features</div>
+          <p className="text-sm font-light mb-8" style={{ color: '#374151' }}>As Seen & Trusted By</p>
+          <div className="flex justify-center items-center gap-10 md:gap-16 flex-wrap opacity-60">
+            <img 
+              src="/images/logos/truworths.png" 
+              alt="Truworths" 
+              className="h-6 md:h-8 object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+            />
+            <img 
+              src="/images/logos/comensa.jpeg" 
+              alt="COMENSA" 
+              className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+            />
+            <img 
+              src="/images/logos/kfc.png" 
+              alt="KFC" 
+              className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+            />
+            <img 
+              src="/images/logos/unjani-clinic.png" 
+              alt="Unjani Clinic" 
+              className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+            />
           </div>
         </div>
+        </FadeIn>
 
-        {/* Choose Your Path */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12" style={{ color: 'var(--charcoal)' }}>
-            Choose Your Path
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl mb-6">
+
+
+
+        {/* Meet Coach Tina */}
+        <FadeIn>
+        <div className="bg-gray-50 p-12 md:p-16 rounded-2xl mb-20 shadow-sm border border-gray-200">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+            {/* Image Side */}
+            <div className="relative">
+              <div className="aspect-[4/5] max-w-md mx-auto lg:max-w-none overflow-hidden rounded-xl shadow-lg relative z-10">
                 <img
-                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                  src="/images/meet1.jpg"
+                  alt="Coach Tina Portrait"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <div 
+                className="absolute top-6 -left-6 md:-left-8 w-full h-full rounded-xl opacity-20 z-0 hidden md:block" 
+                style={{ backgroundColor: 'var(--sage-green)' }}
+              />
+            </div>
+            
+            {/* Text Side */}
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 leading-tight" style={{ color: 'var(--charcoal)' }}>
+                Meet Coach Tina
+              </h2>
+              <div className="space-y-6 text-lg font-light leading-relaxed" style={{ color: '#374151' }}>
+                <p>
+                  With over a decade of experience bridging the gap between personal wholeness and professional excellence, I am deeply committed to helping leaders find their authentic voice.
+                </p>
+                <p>
+                  My journey began where many of yours are now: navigating complex transitions, seeking purpose beyond the paycheck, and striving to build a legacy grounded in emotional intelligence and faith.
+                </p>
+                <p>
+                  Today, I partner with executives, corporate teams, and driven individuals to <span className="font-medium italic" style={{ color: 'var(--charcoal)' }}>reset</span> their mindsets, <span className="font-medium italic" style={{ color: 'var(--charcoal)' }}>realign</span> with their core values, and <span className="font-medium italic" style={{ color: 'var(--charcoal)' }}>rise</span> to their fullest potential.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        </FadeIn>
+
+
+        {/* Services Section */}
+        <FadeIn>
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif mb-4" style={{ color: 'var(--charcoal)' }}>
+              Core Services
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#374151' }}>
+              Tailored coaching and training designed to elevate your leadership, team, and organization.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Leadership Coaching */}
+            <div className="bg-white group rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden flex flex-col">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src="/images/serv1.jpeg"
                   alt="Leadership coaching session"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Leadership Coaching</h3>
-              <p className="text-sm" style={{ color: '#6b7280' }}>1:1 executive coaching</p>
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Leadership Coaching</h3>
+                <p className="text-sm font-light flex-1 mb-4" style={{ color: '#374151' }}>1:1 executive coaching designed to unlock your authentic leadership style and strategic vision.</p>
+                <div className="font-medium text-sm flex items-center transition-colors hover:text-gray-900" style={{ color: 'var(--sage-green)' }}>
+                  Learn More <span className="ml-1">→</span>
+                </div>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl mb-6">
+
+            {/* Corporate Training */}
+            <div className="bg-white group rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden flex flex-col">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                  src="/images/serv2.jpeg"
                   alt="Team corporate training"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Corporate Training</h3>
-              <p className="text-sm" style={{ color: '#6b7280' }}>Team development</p>
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Corporate Training</h3>
+                <p className="text-sm font-light flex-1 mb-4" style={{ color: '#374151' }}>Interactive workshops for team development, emotional intelligence, and alignment.</p>
+                <div className="font-medium text-sm flex items-center transition-colors hover:text-gray-900" style={{ color: 'var(--sage-green)' }}>
+                  Learn More <span className="ml-1">→</span>
+                </div>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl mb-6">
+
+            {/* Speaking */}
+            <div className="bg-white group rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden flex flex-col">
+              <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+                  src="/images/serv3.jpeg"
                   alt="Public speaking event"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: '#6b7280' }}>Speaking</h3>
-              <p className="text-sm" style={{ color: '#6b7280' }}>Keynote presentations</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl mb-6">
-                <img
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
-                  alt="Youth empowerment session"
-                  className="w-full h-full object-cover"
-                />
+              <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-xl font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Speaking</h3>
+                <p className="text-sm font-light flex-1 mb-4" style={{ color: '#374151' }}>Dynamic and transformative keynote presentations for conferences and events.</p>
+                <div className="font-medium text-sm flex items-center transition-colors hover:text-gray-900" style={{ color: 'var(--sage-green)' }}>
+                  Learn More <span className="ml-1">→</span>
+                </div>
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Empower U</h3>
-              <p className="text-sm" style={{ color: '#6b7280' }}>Kids & teens program</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl mb-6">
-                <img
-                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80"
-                  alt="Women empowerment coaching"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Authentically Woman</h3>
-              <p className="text-sm" style={{ color: '#6b7280' }}>Women's empowerment</p>
             </div>
           </div>
         </div>
+        </FadeIn>
 
-        {/* Lead From Within Framework */}
-        <div className="bg-gray-50 p-12 rounded-2xl mb-20">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-8" style={{ color: 'var(--charcoal)' }}>
-            Lead From Within
-          </h2>
-          <p className="text-xl text-center mb-8 max-w-3xl mx-auto" style={{ color: '#6b7280' }}>
-            Your signature framework for transformational leadership
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-12 h-12 rounded-full mx-auto mb-4 bg-white flex items-center justify-center text-[var(--sage-green)] shadow-sm">
-                <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor" aria-hidden="true">
-                  <path d="M12 4.5a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15Zm0 2a5.5 5.5 0 0 0 0 11 5.5 5.5 0 0 0 0-11Zm0 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
-                </svg>
-              </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Self-Awareness</h3>
-              <p className="text-sm" style={{ color: '#6b7280' }}>Discover your authentic leadership style</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 rounded-full mx-auto mb-4 bg-white flex items-center justify-center text-[var(--sage-green)] shadow-sm">
-                <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor" aria-hidden="true">
-                  <path d="M12 21s-6-4.35-6-8.25S8.25 5 12 5s6 3.1 6 7.75S12 21 12 21Zm0-16.75c-1.8 0-3.5.85-4.5 2.45C6 8.35 6 9.35 6 10.25c0 3.1 3 5.75 6 5.75s6-2.65 6-5.75c0-.9 0-1.9-1.5-3.05C15.5 4.75 13.8 4.25 12 4.25Z" />
-                </svg>
-              </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Emotional Intelligence</h3>
-              <p className="text-sm" style={{ color: '#6b7280' }}>Lead with empathy and wisdom</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 rounded-full mx-auto mb-4 bg-white flex items-center justify-center text-[var(--sage-green)] shadow-sm">
-                <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2.75a9.25 9.25 0 1 0 9.25 9.25A9.26 9.26 0 0 0 12 2.75Zm0 15.5a6.25 6.25 0 1 1 6.25-6.25A6.26 6.26 0 0 1 12 18.25Zm.5-10.75h1.5v4.5h-4.5v-1.5h3V7.5Zm3.64 4.1-1.06 1.06L15.44 14l-1.06-1.06-1.06 1.06 1.06 1.06-1.06 1.06 1.06 1.06 1.06-1.06 1.06 1.06 1.06-1.06-1.06-1.06 1.06-1.06-1.06-1.06Z" />
-                </svg>
-              </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Purpose-Driven Action</h3>
-              <p className="text-sm" style={{ color: '#6b7280' }}>Create meaningful impact</p>
-            </div>
-          </div>
-        </div>
 
-        {/* Featured Tools */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-serif text-center mb-12" style={{ color: 'var(--charcoal)' }}>
-            Start with These Free Tools
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl mb-6">
-                <img
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
-                  alt="Weekly reset guide"
-                  className="w-full h-full object-cover"
-                />
+        {/* Empower U Feature */}
+        <FadeIn>
+        <div className="p-12 md:p-16 rounded-2xl mb-20 shadow-lg text-white" style={{ backgroundColor: 'var(--sage-green)' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
+            <div className="space-y-6">
+              <div className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold tracking-wider uppercase mb-2 bg-white/20">
+                Youth Program
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Weekly Reset Guide</h3>
-              <p className="text-sm mb-4" style={{ color: '#6b7280' }}>Start your week with intention</p>
-              <button className="text-sm font-medium" style={{ color: 'var(--sage-green)' }}>Download →</button>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight">
+                Empower U: Equipping the Next Generation
+              </h2>
+              <p className="text-lg text-white/90 font-light leading-relaxed">
+                Empower U is a specialized coaching program designed for kids and teens. We provide young minds with the essential tools to build confidence, develop emotional intelligence, and lead themselves before they lead others.
+              </p>
+              <ul className="space-y-4 pt-4">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Build unshakeable self-confidence & self-worth</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Develop healthy emotional regulation strategies</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 mr-3 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Learn essential soft skills for the modern world</span>
+                </li>
+              </ul>
+              <div className="pt-8">
+                <button 
+                  className="px-8 py-4 rounded-lg border-2 font-medium transition-all hover:bg-white/10" 
+                  style={{ borderColor: 'white', color: 'white' }}
+                >
+                  Discover Empower U
+                </button>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl mb-6">
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative z-10 hidden md:block">
                 <img
-                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
-                  alt="Confidence assessment"
-                  className="w-full h-full object-cover"
+                  src="/images/empower-u.png"
+                  alt="Happy kids participating in Empower U program"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Confidence Assessment</h3>
-              <p className="text-sm mb-4" style={{ color: '#6b7280' }}>Identify your strengths</p>
-              <button className="text-sm font-medium" style={{ color: 'var(--sage-green)' }}>Download →</button>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl mb-6">
-                <img
-                  src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80"
-                  alt="Purpose journal"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Purpose Journal</h3>
-              <p className="text-sm mb-4" style={{ color: '#6b7280' }}>Clarify your life direction</p>
-              <button className="text-sm font-medium" style={{ color: 'var(--sage-green)' }}>Download →</button>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl mb-6">
-                <img
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
-                  alt="Leadership toolkit"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Leadership Toolkit</h3>
-              <p className="text-sm mb-4" style={{ color: '#6b7280' }}>Essential leadership exercises</p>
-              <button className="text-sm font-medium" style={{ color: 'var(--sage-green)' }}>Download →</button>
             </div>
           </div>
         </div>
+        </FadeIn>
+
 
         {/* Podcast Spotlight */}
+        <FadeIn>
         <div className="bg-gray-50 p-12 rounded-2xl mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-serif mb-6" style={{ color: 'var(--charcoal)' }}>
                 Faith in Action Podcast
               </h2>
-              <p className="text-lg mb-6" style={{ color: '#6b7280' }}>
+              <p className="text-lg mb-6" style={{ color: '#374151' }}>
                 Practical conversations about leadership, purpose, and living out your faith in everyday life.
               </p>
               <div className="flex gap-4 mb-6">
@@ -274,14 +309,14 @@ export function Hero() {
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="aspect-square overflow-hidden rounded-lg mb-4">
                 <img
-                  src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80"
+                  src="/images/faith.png"
                   alt="Podcast recording setup"
                   className="w-full h-full object-cover"
                 />
               </div>
               <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Latest Episode: Finding Your Voice</h3>
-              <p className="text-sm mb-4" style={{ color: '#6b7280' }}>How to speak up with confidence in leadership roles</p>
-              <div className="flex items-center gap-4 text-sm" style={{ color: '#6b7280' }}>
+              <p className="text-sm mb-4" style={{ color: '#374151' }}>How to speak up with confidence in leadership roles</p>
+              <div className="flex items-center gap-4 text-sm" style={{ color: '#374151' }}>
                 <span>45 min</span>
                 <span>•</span>
                 <span>2 weeks ago</span>
@@ -299,13 +334,13 @@ export function Hero() {
             <div className="text-center">
               <div className="aspect-[3/4] overflow-hidden rounded-lg mb-4 max-w-xs mx-auto">
                 <img
-                  src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80"
+                  src="/images/book5.jpeg"
                   alt="Book cover for transitions"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Transitions</h3>
-              <p className="text-sm mb-4" style={{ color: '#6b7280' }}>Navigate life's changes with purpose</p>
+              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Nashe-With-God</h3>
+              <p className="text-sm mb-4" style={{ color: '#374151' }}>Navigate life's changes with purpose</p>
               <button className="px-4 py-2 border rounded-lg" style={{ borderColor: 'var(--sage-green)', color: 'var(--sage-green)' }}>
                 Learn More
               </button>
@@ -313,13 +348,13 @@ export function Hero() {
             <div className="text-center">
               <div className="aspect-[3/4] overflow-hidden rounded-lg mb-4 max-w-xs mx-auto">
                 <img
-                  src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80"
+                  src="/images/book3.png"
                   alt="Book cover for NaShe"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>NaShe</h3>
-              <p className="text-sm mb-4" style={{ color: '#6b7280' }}>Embrace your authentic self</p>
+              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>AteBelle Children’s Book</h3>
+              <p className="text-sm mb-4" style={{ color: '#374151' }}>Embrace your authentic self</p>
               <button className="px-4 py-2 border rounded-lg" style={{ borderColor: 'var(--sage-green)', color: 'var(--sage-green)' }}>
                 Learn More
               </button>
@@ -327,13 +362,13 @@ export function Hero() {
             <div className="text-center">
               <div className="aspect-[3/4] overflow-hidden rounded-lg mb-4 max-w-xs mx-auto">
                 <img
-                  src="https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?auto=format&fit=crop&w=800&q=80"
+                  src="/images/book4.jpeg"
                   alt="Book cover for Lead From Within"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Lead From Within</h3>
-              <p className="text-sm mb-4" style={{ color: '#6b7280' }}>Your leadership framework guide</p>
+              <h3 className="font-semibold mb-2" style={{ color: 'var(--charcoal)' }}>Authentic Marketing Mastery</h3>
+              <p className="text-sm mb-4" style={{ color: '#374151' }}>Your leadership framework guide</p>
               <button className="px-4 py-2 border rounded-lg" style={{ borderColor: 'var(--sage-green)', color: 'var(--sage-green)' }}>
                 Learn More
               </button>
@@ -347,7 +382,7 @@ export function Hero() {
             Real Results, Real Lives
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
                 <img
                   src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
@@ -356,15 +391,15 @@ export function Hero() {
                 />
                 <div>
                   <div className="font-semibold" style={{ color: 'var(--charcoal)' }}>Sarah M.</div>
-                  <div className="text-sm" style={{ color: '#6b7280' }}>Executive Director</div>
+                  <div className="text-sm" style={{ color: '#374151' }}>Executive Director</div>
                 </div>
               </div>
-              <p className="text-sm italic mb-4" style={{ color: '#6b7280' }}>
+              <p className="text-sm italic mb-4" style={{ color: '#374151' }}>
                 "From overwhelmed to confident leader in 6 months. Coach Tina helped me find my voice and lead with purpose."
               </p>
               <div className="text-sm font-medium" style={{ color: 'var(--sage-green)' }}>Before: Burned out → After: Leading with clarity</div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
                 <img
                   src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80"
@@ -373,15 +408,15 @@ export function Hero() {
                 />
                 <div>
                   <div className="font-semibold" style={{ color: 'var(--charcoal)' }}>Michael K.</div>
-                  <div className="text-sm" style={{ color: '#6b7280' }}>Team Lead</div>
+                  <div className="text-sm" style={{ color: '#374151' }}>Team Lead</div>
                 </div>
               </div>
-              <p className="text-sm italic mb-4" style={{ color: '#6b7280' }}>
+              <p className="text-sm italic mb-4" style={{ color: '#374151' }}>
                 "The corporate training transformed our team's communication and productivity."
               </p>
               <div className="text-sm font-medium" style={{ color: 'var(--sage-green)' }}>Before: Conflict → After: Collaboration</div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
                 <img
                   src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
@@ -390,23 +425,26 @@ export function Hero() {
                 />
                 <div>
                   <div className="font-semibold" style={{ color: 'var(--charcoal)' }}>Jennifer L.</div>
-                  <div className="text-sm" style={{ color: '#6b7280' }}>Program Manager</div>
+                  <div className="text-sm" style={{ color: '#374151' }}>Program Manager</div>
                 </div>
               </div>
-              <p className="text-sm italic mb-4" style={{ color: '#6b7280' }}>
+              <p className="text-sm italic mb-4" style={{ color: '#374151' }}>
                 "Authentically Woman gave me the tools to heal and step into my leadership role fully."
               </p>
               <div className="text-sm font-medium" style={{ color: 'var(--sage-green)' }}>Before: Self-doubt → After: Self-assured</div>
             </div>
           </div>
         </div>
+        </FadeIn>
+
 
         {/* Newsletter / Community */}
+        <FadeIn>
         <div className="bg-gray-50 p-12 rounded-2xl mb-20 text-center">
           <h2 className="text-3xl md:text-4xl font-serif mb-6" style={{ color: 'var(--charcoal)' }}>
             Get My Weekly Reset + Tools
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: '#6b7280' }}>
+          <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ color: '#374151' }}>
             Join thousands who start their week with intention, clarity, and practical tools for personal growth.
           </p>
           <div className="max-w-md mx-auto flex gap-4">
@@ -420,13 +458,16 @@ export function Hero() {
             </button>
           </div>
         </div>
+        </FadeIn>
+
 
         {/* Final CTA */}
+        <FadeIn>
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-serif mb-6" style={{ color: 'var(--charcoal)' }}>
             Ready to Transform Your Leadership?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: '#6b7280' }}>
+          <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: '#374151' }}>
             Book a discovery call to discuss your goals and see if we're a great fit to work together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -438,6 +479,7 @@ export function Hero() {
             </button>
           </div>
         </div>
+        </FadeIn>
       </div>
     </section>
   );

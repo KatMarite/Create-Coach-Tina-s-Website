@@ -1,8 +1,10 @@
+import { FadeIn } from './FadeIn';
 import { Sparkles, Calendar, Users2 } from 'lucide-react';
 
 export function EmpowerU() {
   return (
     <section id="empower u" className="py-24 lg:py-32 bg-white">
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left - Image */}
@@ -38,7 +40,7 @@ export function EmpowerU() {
               A transformative 12-week group coaching program designed to help you step into your power, clarify your vision, and create the life you've always imagined.
             </p>
 
-            <div className="space-y-4 text-base font-light leading-relaxed" style={{ color: '#6b7280' }}>
+            <div className="space-y-4 text-base font-light leading-relaxed" style={{ color: '#374151' }}>
               <p>
                 Empower U is more than a program—it's a journey of self-discovery and transformation. Through weekly group coaching sessions, powerful exercises, and a supportive community, you'll break through limiting beliefs and step into your authentic power.
               </p>
@@ -50,21 +52,21 @@ export function EmpowerU() {
                   <Calendar className="w-5 h-5" style={{ color: 'var(--sage-green)' }} />
                   <span className="font-serif text-2xl" style={{ color: 'var(--charcoal)' }}>12</span>
                 </div>
-                <div className="text-sm font-light" style={{ color: '#6b7280' }}>Weeks</div>
+                <div className="text-sm font-light" style={{ color: '#374151' }}>Weeks</div>
               </div>
               <div className="text-center sm:text-left">
                 <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                   <Users2 className="w-5 h-5" style={{ color: 'var(--sage-green)' }} />
                   <span className="font-serif text-2xl" style={{ color: 'var(--charcoal)' }}>12-15</span>
                 </div>
-                <div className="text-sm font-light" style={{ color: '#6b7280' }}>Participants</div>
+                <div className="text-sm font-light" style={{ color: '#374151' }}>Participants</div>
               </div>
               <div className="text-center sm:text-left">
                 <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
                   <Sparkles className="w-5 h-5" style={{ color: 'var(--sage-green)' }} />
                   <span className="font-serif text-2xl" style={{ color: 'var(--charcoal)' }}>∞</span>
                 </div>
-                <div className="text-sm font-light" style={{ color: '#6b7280' }}>Transformation</div>
+                <div className="text-sm font-light" style={{ color: '#374151' }}>Transformation</div>
               </div>
             </div>
 
@@ -105,6 +107,7 @@ export function EmpowerU() {
           </div>
         </div>
       </div>
+    </FadeIn>
     </section>
   );
 }

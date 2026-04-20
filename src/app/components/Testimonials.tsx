@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { FadeIn } from './FadeIn';
 import { Quote, Star } from 'lucide-react';
 
 export function Testimonials() {
@@ -33,6 +34,7 @@ export function Testimonials() {
 
   return (
     <section className="py-24 lg:py-32 bg-white overflow-hidden">
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
           <div className="inline-block px-4 py-1.5 rounded-full text-sm font-light tracking-wide bg-gray-100 text-gray-800">
@@ -70,6 +72,7 @@ export function Testimonials() {
           ))}
         </div>
       </div>
+    </FadeIn>
     </section>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { FadeIn } from './FadeIn';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 export function Contact() {
@@ -42,6 +43,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-24 lg:py-32 bg-gray-50">
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-1.5 rounded-full text-sm font-light tracking-wide mb-4" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
@@ -66,7 +68,7 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="font-medium" style={{ color: 'var(--charcoal)' }}>Email</h4>
-                <a href="mailto:hello@coachtina.com" className="text-sm font-light hover:underline" style={{ color: '#6b7280' }}>hello@coachtina.com</a>
+                <a href="mailto:hello@coachtina.com" className="text-sm font-light hover:underline" style={{ color: '#374151' }}>hello@coachtina.com</a>
               </div>
             </div>
 
@@ -76,7 +78,7 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="font-medium" style={{ color: 'var(--charcoal)' }}>Phone</h4>
-                <a href="tel:+27123456789" className="text-sm font-light hover:underline" style={{ color: '#6b7280' }}>+27 (12) 345 6789</a>
+                <a href="tel:+27123456789" className="text-sm font-light hover:underline" style={{ color: '#374151' }}>+27 (12) 345 6789</a>
               </div>
             </div>
 
@@ -86,7 +88,7 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="font-medium" style={{ color: 'var(--charcoal)' }}>Office Base</h4>
-                <p className="text-sm font-light" style={{ color: '#6b7280' }}>Pretoria, South Africa<br />(Available virtually worldwide)</p>
+                <p className="text-sm font-light" style={{ color: '#374151' }}>Pretoria, South Africa<br />(Available virtually worldwide)</p>
               </div>
             </div>
           </div>
@@ -135,6 +137,7 @@ export function Contact() {
           </div>
         </div>
       </div>
+    </FadeIn>
     </section>
   );
 }

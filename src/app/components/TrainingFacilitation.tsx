@@ -1,3 +1,4 @@
+import { FadeIn } from './FadeIn';
 import { Users, Presentation, Award } from 'lucide-react';
 
 export function TrainingFacilitation() {
@@ -24,6 +25,7 @@ export function TrainingFacilitation() {
 
   return (
     <section id="training & facilitation" className="py-24 lg:py-32" style={{ backgroundColor: '#fafafa' }}>
+      <FadeIn>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -36,7 +38,7 @@ export function TrainingFacilitation() {
           >
             Empower Your Team to Excel
           </h2>
-          <p className="text-lg font-light" style={{ color: '#6b7280' }}>
+          <p className="text-lg font-light" style={{ color: '#374151' }}>
             Dynamic training programs and facilitation services that drive real results for organizations and teams
           </p>
         </div>
@@ -59,7 +61,7 @@ export function TrainingFacilitation() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 border-2 border-gray-100 hover:shadow-xl transition-all"
+                className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:shadow-xl transition-all"
               >
                 <div
                   className="w-14 h-14 rounded-full flex items-center justify-center mb-6"
@@ -72,7 +74,7 @@ export function TrainingFacilitation() {
                   {offering.title}
                 </h3>
 
-                <p className="text-base font-light mb-6 leading-relaxed" style={{ color: '#6b7280' }}>
+                <p className="text-base font-light mb-6 leading-relaxed" style={{ color: '#374151' }}>
                   {offering.description}
                 </p>
 
@@ -101,6 +103,7 @@ export function TrainingFacilitation() {
           </button>
         </div>
       </div>
+    </FadeIn>
     </section>
   );
 }
