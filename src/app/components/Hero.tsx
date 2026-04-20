@@ -27,7 +27,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="start-here" className="min-h-screen flex items-center pt-20">
+    <section id="start-here" className="min-h-screen flex items-center pt-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 w-full">
         {/* Hero Section */}
         <FadeIn>

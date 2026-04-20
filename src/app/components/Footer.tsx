@@ -7,9 +7,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
-            <h3 className="font-serif text-2xl" style={{ color: 'var(--charcoal)' }}>
-              Coach Tina
-            </h3>
+            <img 
+              src="/images/logo.png" 
+              alt="Coach Tina Logo" 
+              className="h-24 md:h-32 w-auto object-contain -ml-2" 
+            />
             <p className="text-sm font-light max-w-md leading-relaxed" style={{ color: '#374151' }}>
               Empowering individuals to discover their purpose, unlock their potential, and create lives that truly matter.
             </p>
