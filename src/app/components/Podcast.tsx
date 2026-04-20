@@ -86,7 +86,7 @@ export function Podcast() {
           <div className="relative lg:order-last">
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1761446812363-f3edd68c5919?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb2RjYXN0JTIwbWljcm9waG9uZSUyMHN0dWRpbyUyMG1pbmltYWxpc3R8ZW58MXx8fHwxNzcxMzU0NzUwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/images/pod.jpeg"
                 alt="Podcast"
                 className="w-full h-full object-cover"
               />

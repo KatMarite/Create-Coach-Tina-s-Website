@@ -67,7 +67,7 @@ export function Speaking() {
           <div className="relative">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1475721025505-23f465a3eb10?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src="/images/serv3.jpeg" 
                 alt="Coach Tina Speaking" 
                 className="w-full h-full object-cover"
               />

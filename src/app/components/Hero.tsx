@@ -384,52 +384,46 @@ export function Hero() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
-                <img
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
-                  alt="Sarah M."
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
+                <div className="w-12 h-12 rounded-full mr-4 flex items-center justify-center text-white font-semibold text-lg" style={{ backgroundColor: 'var(--sage-green)' }}>
+                  SM
+                </div>
                 <div>
                   <div className="font-semibold" style={{ color: 'var(--charcoal)' }}>Sarah M.</div>
                   <div className="text-sm" style={{ color: '#374151' }}>Executive Director</div>
                 </div>
               </div>
               <p className="text-sm italic mb-4" style={{ color: '#374151' }}>
-                "From overwhelmed to confident leader in 6 months. Coach Tina helped me find my voice and lead with purpose."
+                &quot;From overwhelmed to confident leader in 6 months. Coach Tina helped me find my voice and lead with purpose.&quot;
               </p>
               <div className="text-sm font-medium" style={{ color: 'var(--sage-green)' }}>Before: Burned out → After: Leading with clarity</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
-                <img
-                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80"
-                  alt="Michael K."
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
+                <div className="w-12 h-12 rounded-full mr-4 flex items-center justify-center text-white font-semibold text-lg" style={{ backgroundColor: 'var(--charcoal)' }}>
+                  MK
+                </div>
                 <div>
                   <div className="font-semibold" style={{ color: 'var(--charcoal)' }}>Michael K.</div>
                   <div className="text-sm" style={{ color: '#374151' }}>Team Lead</div>
                 </div>
               </div>
               <p className="text-sm italic mb-4" style={{ color: '#374151' }}>
-                "The corporate training transformed our team's communication and productivity."
+                &quot;The corporate training transformed our team&apos;s communication and productivity.&quot;
               </p>
               <div className="text-sm font-medium" style={{ color: 'var(--sage-green)' }}>Before: Conflict → After: Collaboration</div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
               <div className="flex items-center mb-4">
-                <img
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
-                  alt="Jennifer L."
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
+                <div className="w-12 h-12 rounded-full mr-4 flex items-center justify-center text-white font-semibold text-lg" style={{ backgroundColor: '#6b7280' }}>
+                  JL
+                </div>
                 <div>
                   <div className="font-semibold" style={{ color: 'var(--charcoal)' }}>Jennifer L.</div>
                   <div className="text-sm" style={{ color: '#374151' }}>Program Manager</div>
                 </div>
               </div>
               <p className="text-sm italic mb-4" style={{ color: '#374151' }}>
-                "Authentically Woman gave me the tools to heal and step into my leadership role fully."
+                &quot;Authentically Woman gave me the tools to heal and step into my leadership role fully.&quot;
               </p>
               <div className="text-sm font-medium" style={{ color: 'var(--sage-green)' }}>Before: Self-doubt → After: Self-assured</div>
             </div>
