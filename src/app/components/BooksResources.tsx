@@ -66,7 +66,7 @@ export function BooksResources() {
         {/* Books for Purchase Section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-1.5 rounded-full text-sm font-light tracking-wide mb-6" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
-            Books & Store
+            Books
           </div>
           <h2
             className="font-serif text-4xl md:text-5xl leading-tight mb-6"
