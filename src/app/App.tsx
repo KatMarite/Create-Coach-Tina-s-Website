@@ -1,7 +1,7 @@
 "use client";
 
 import { Navigation } from './components/Navigation';
-import { Hero } from './components/Hero';
+import { Home } from './components/Home';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
     <div className="min-h-screen bg-white">
       <Navigation />
       <main>
-        <Hero />
+        <Home />
       </main>
       <Footer />
     </div>

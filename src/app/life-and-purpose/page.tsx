@@ -2,14 +2,14 @@
 
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
-import { AuthenticallyWoman } from '../components/AuthenticallyWoman';
+import { LifeAndPurpose } from '../components/LifeAndPurpose';
 
-export default function AuthenticallyWomanPage() {
+export default function LifeAndPurposePage() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navigation />
-      <main className="flex-grow pt-20">
-        <AuthenticallyWoman />
+      <main className="flex-grow">
+        <LifeAndPurpose />
       </main>
       <Footer />
     </div>
