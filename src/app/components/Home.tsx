@@ -72,16 +72,29 @@ export function Home() {
             <p className="text-sm font-light mb-6 sm:mb-8" style={{ color: '#374151' }}>
               As seen on leading platforms. Trusted by respected organisations and brands across South Africa and beyond.
             </p>
-            <div className="flex justify-center items-center gap-6 sm:gap-10 md:gap-14 flex-wrap opacity-60 font-serif text-lg font-medium text-gray-500 uppercase tracking-widest">
-              <span>KFC Africa</span>
-              <span>Spur Group</span>
-              <span>EduBridge</span>
-              <span>Truworths</span>
-              <span>COMENSA</span>
-              <span>SABC 2</span>
-              <span>Soweto TV</span>
-              <span>SAfm</span>
-              <span>Radio Pulpit</span>
+            <div className="flex overflow-hidden w-full gap-10 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] py-4">
+              <div className="flex gap-10 animate-marquee opacity-60 items-center shrink-0">
+                <img src="/images/kfc.png" alt="KFC Africa" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/spur.png" alt="Spur Group" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <span className="font-serif text-lg font-medium text-gray-500 uppercase tracking-widest shrink-0">EduBridge</span>
+                <img src="/images/truworths.png" alt="Truworths" className="h-6 md:h-8 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/comensa.jpg" alt="COMENSA" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/sabc2.png" alt="SABC 2" className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/soweto tv.jpg" alt="Soweto TV" className="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/safm.png" alt="SAfm" className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/radio pulpit.jpg" alt="Radio Pulpit" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+              </div>
+              <div className="flex gap-10 animate-marquee opacity-60 items-center shrink-0" aria-hidden="true">
+                <img src="/images/kfc.png" alt="KFC Africa" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/spur.png" alt="Spur Group" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <span className="font-serif text-lg font-medium text-gray-500 uppercase tracking-widest shrink-0">EduBridge</span>
+                <img src="/images/truworths.png" alt="Truworths" className="h-6 md:h-8 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/comensa.jpg" alt="COMENSA" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/sabc2.png" alt="SABC 2" className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/soweto tv.jpg" alt="Soweto TV" className="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/safm.png" alt="SAfm" className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img src="/images/radio pulpit.jpg" alt="Radio Pulpit" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+              </div>
             </div>
           </div>
         </FadeIn>
@@ -146,7 +159,7 @@ export function Home() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="/contact" className="px-6 py-3 rounded-lg transition-all shadow-md hover:shadow-xl text-center" style={{ backgroundColor: 'var(--charcoal)', color: 'white' }}>
+                <a href="/contact" className="px-6 py-3 rounded-lg transition-all shadow-md hover:shadow-xl text-center font-bold" style={{ backgroundColor: 'var(--teu-yellow)', color: 'var(--charcoal)' }}>
                   Start With a Discovery Call
                 </a>
                 <a href="/free-tools" className="px-6 py-3 rounded-lg border transition-all hover:bg-gray-50 text-center" style={{ borderColor: 'var(--sage-green)', color: 'var(--sage-green)' }}>
@@ -225,7 +238,7 @@ export function Home() {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/shop" className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center" style={{ backgroundColor: 'var(--charcoal)', color: 'white' }}>
+              <a href="/shop" className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center font-bold" style={{ backgroundColor: 'var(--teu-yellow)', color: 'var(--charcoal)' }}>
                 Visit the Shop
               </a>
               <a href="/media" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-white text-center" style={{ borderColor: 'var(--sage-green)', color: 'var(--sage-green)' }}>

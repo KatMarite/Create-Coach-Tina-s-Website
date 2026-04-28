@@ -129,6 +129,17 @@
   --color-charcoal: var(--charcoal);
   --color-teu-yellow: var(--teu-yellow);
   --color-cream: var(--cream);
+
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 2.5rem));
+    }
+  }
 }
 
 @layer base {

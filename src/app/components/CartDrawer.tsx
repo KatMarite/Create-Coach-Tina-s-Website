@@ -184,8 +184,8 @@ export function CartDrawer() {
                 </div>
                 <button 
                   onClick={() => setCheckoutStep(true)}
-                  className="w-full py-4 rounded-lg font-medium text-white transition-all hover:shadow-lg hover:scale-[1.02]"
-                  style={{ backgroundColor: 'var(--charcoal)' }}
+                  className="w-full py-4 rounded-lg font-bold transition-all hover:shadow-lg hover:scale-[1.02]"
+                  style={{ backgroundColor: 'var(--teu-yellow)', color: 'var(--charcoal)' }}
                 >
                   Proceed to Checkout
                 </button>
