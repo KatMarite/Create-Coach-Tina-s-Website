@@ -8,7 +8,7 @@ export default function SpeakingPage() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navigation />
-      <main className="flex-grow pt-20 flex flex-col">
+      <main className="flex-grow">
         <Speaking />
       </main>
       <Footer />

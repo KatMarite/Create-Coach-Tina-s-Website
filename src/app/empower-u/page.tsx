@@ -8,7 +8,7 @@ export default function EmpowerUPage() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navigation />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow">
         <EmpowerU />
       </main>
       <Footer />

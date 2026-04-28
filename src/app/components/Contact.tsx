@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { FadeIn } from './FadeIn';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Send, ExternalLink } from 'lucide-react';
 
 export function Contact() {
   const [result, setResult] = useState("Send Message");
@@ -42,102 +42,106 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 lg:py-32 bg-gray-50">
-      <FadeIn>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="text-center mb-10 sm:mb-16">
-          <div className="inline-block px-4 py-1.5 rounded-full text-sm font-light tracking-wide mb-4" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
-            Get In Touch
-          </div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl" style={{ color: 'var(--charcoal)' }}>
-            Let's Start Your Journey
-          </h2>
-          <p className="mt-4 text-lg font-light max-w-2xl mx-auto" style={{ color: '#4b5563' }}>
-            Whether you are looking for 1:1 coaching, corporate training, or just have a question, I'd love to hear from you.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 item-center">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <h3 className="font-serif text-2xl" style={{ color: 'var(--charcoal)' }}>Contact Information</h3>
-            
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--sage-green)', opacity: 0.1 }}>
-                <Mail className="w-6 h-6" style={{ color: 'var(--sage-green)' }} />
+    <div className="pt-24 sm:pt-28 md:pt-32 pb-16 bg-white min-h-screen">
+      <section className="py-8 sm:py-12 bg-white">
+        <FadeIn>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+            <div className="text-center mb-10 sm:mb-16">
+              <div className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold tracking-wider uppercase mb-4 bg-gray-100" style={{ color: 'var(--sage-green)' }}>
+                Contact / Book
               </div>
-              <div>
-                <h4 className="font-medium" style={{ color: 'var(--charcoal)' }}>Email</h4>
-                <a href="mailto:hello@coachtina.com" className="text-sm font-light hover:underline" style={{ color: '#374151' }}>hello@coachtina.com</a>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--sage-green)', opacity: 0.1 }}>
-                <Phone className="w-6 h-6" style={{ color: 'var(--sage-green)' }} />
-              </div>
-              <div>
-                <h4 className="font-medium" style={{ color: 'var(--charcoal)' }}>Phone</h4>
-                <a href="tel:+27123456789" className="text-sm font-light hover:underline" style={{ color: '#374151' }}>+27 (12) 345 6789</a>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--sage-green)', opacity: 0.1 }}>
-                <MapPin className="w-6 h-6" style={{ color: 'var(--sage-green)' }} />
-              </div>
-              <div>
-                <h4 className="font-medium" style={{ color: 'var(--charcoal)' }}>Office Base</h4>
-                <p className="text-sm font-light" style={{ color: '#374151' }}>Pretoria, South Africa<br />(Available virtually worldwide)</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-xl">
-            <form onSubmit={onSubmit} className="space-y-6">
-              <input type="hidden" name="subject" value="New Submission from Coach Tina Website" />
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight mb-8" style={{ color: 'var(--charcoal)' }}>
+                Ready to rise? Let’s start the conversation.
+              </h1>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                  <input type="text" id="name" name="name" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sage-green)] focus:ring-opacity-50" placeholder="Jane Doe" />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                  <input type="email" id="email" name="email" required className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sage-green)] focus:ring-opacity-50" placeholder="jane@example.com" />
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center flex items-center justify-center font-medium" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  Book via Calendly
+                </a>
+                <a href="mailto:bookings@coachtina.co.za" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-center flex items-center justify-center font-medium" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
+                  <Mail className="w-5 h-5 mr-2" />
+                  Email: bookings@coachtina.co.za
+                </a>
               </div>
-              
-              <div>
-                <label htmlFor="inquiry" className="block text-sm font-medium text-gray-700 mb-1">I am interested in...</label>
-                <select id="inquiry" name="inquiry" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-opacity-50 focus:outline-none text-gray-700">
-                  <option value="1:1 Coaching">1:1 Coaching</option>
-                  <option value="Corporate Training">Corporate Training</option>
-                  <option value="Speaking Engagement">Speaking Engagement</option>
-                  <option value="Other">Other Inquiry</option>
-                </select>
-              </div>
+            </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
-                <textarea id="message" name="message" required rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-opacity-50 focus:outline-none resize-none" placeholder="Tell me a bit about what you're looking for..."></textarea>
-              </div>
+            <div className="max-w-3xl mx-auto">
+              <div className="bg-gray-50 p-8 sm:p-12 rounded-3xl shadow-lg border border-gray-100">
+                <h2 className="text-2xl font-serif mb-6 text-center" style={{ color: 'var(--charcoal)' }}>Intake Form</h2>
+                <p className="text-center text-gray-500 font-light mb-8">Fill out this form to inquire about coaching, corporate facilitation, or Empower U programmes.</p>
+                <form onSubmit={onSubmit} className="space-y-6">
+                  <input type="hidden" name="subject" value="New Intake Submission from Coach Tina Website" />
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                      <input type="text" id="name" name="name" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sage-green)] focus:border-transparent" placeholder="Jane Doe" />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                      <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sage-green)] focus:border-transparent" placeholder="jane@example.com" />
+                    </div>
+                  </div>
 
-              <button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-lg text-white font-medium transition-all hover:scale-[1.02] disabled:opacity-70 disabled:hover:scale-100"
-                style={{ backgroundColor: 'var(--sage-green)' }}
-              >
-                <Send className="w-5 h-5" />
-                {result}
-              </button>
-            </form>
+                  <div>
+                    <label htmlFor="inquiry_type" className="block text-sm font-medium text-gray-700 mb-1">Are you inquiring for individual coaching or corporate facilitation?</label>
+                    <select id="inquiry_type" name="inquiry_type" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sage-green)] focus:border-transparent text-gray-700">
+                      <option value="Individual Coaching">Individual Coaching</option>
+                      <option value="Corporate Facilitation">Corporate Facilitation</option>
+                      <option value="Empower U Academy">Empower U Academy</option>
+                      <option value="Speaking">Speaking</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="challenge" className="block text-sm font-medium text-gray-700 mb-1">What is the primary challenge keeping you from your ‘Rise’ phase?</label>
+                    <textarea id="challenge" name="challenge" required rows={3} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sage-green)] focus:border-transparent resize-none" placeholder="Describe your challenge..."></textarea>
+                  </div>
+
+                  <div>
+                    <label htmlFor="outcome" className="block text-sm font-medium text-gray-700 mb-1">What outcome do you want to be true 90 days from now?</label>
+                    <textarea id="outcome" name="outcome" required rows={2} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sage-green)] focus:border-transparent resize-none" placeholder="Your desired outcome..."></textarea>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-1">Where are you based (city/country)?</label>
+                      <input type="text" id="location" name="location" required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sage-green)] focus:border-transparent" placeholder="Johannesburg, South Africa" />
+                    </div>
+                    <div>
+                      <label htmlFor="readiness" className="block text-sm font-medium text-gray-700 mb-1">On a scale of 1–10, how ready are you to invest in your transformation?</label>
+                      <select id="readiness" name="readiness" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sage-green)] focus:border-transparent text-gray-700">
+                        <option value="1">1 - Not ready</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 - Somewhat ready</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10 - Fully ready</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full flex items-center justify-center gap-2 py-4 rounded-lg text-white font-medium transition-all hover:scale-[1.02] disabled:opacity-70 disabled:hover:scale-100 mt-4"
+                    style={{ backgroundColor: 'var(--sage-green)' }}
+                  >
+                    <Send className="w-5 h-5" />
+                    {result}
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </FadeIn>
-    </section>
+        </FadeIn>
+      </section>
+    </div>
   );
 }

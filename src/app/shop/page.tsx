@@ -2,14 +2,14 @@
 
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
-import { Coaching } from '../components/Coaching';
+import { Shop } from '../components/Shop';
 
-export default function CoachingPage() {
+export default function ShopPage() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navigation />
-      <main className="flex-grow pt-20">
-        <Coaching />
+      <main className="flex-grow">
+        <Shop />
       </main>
       <Footer />
     </div>
