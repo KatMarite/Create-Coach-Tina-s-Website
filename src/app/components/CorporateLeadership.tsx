@@ -22,7 +22,7 @@ export function CorporateLeadership() {
             <a href="/contact" className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
               Request a Corporate Proposal
             </a>
-            <a href="/contact" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-center" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
+            <a href="https://calendly.com/tinamujera/30min" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-center" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
               Book a Corporate Discovery Call
             </a>
           </div>

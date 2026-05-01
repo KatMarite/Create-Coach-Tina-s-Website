@@ -24,7 +24,7 @@ export function LifeAndPurpose() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="/contact" className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
+                <a href="https://calendly.com/tinamujera/30min" className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
                   Book a Discovery Session
                 </a>
                 <a href="/shop" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-center" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>

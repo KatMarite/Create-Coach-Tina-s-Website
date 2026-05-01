@@ -21,7 +21,7 @@ export default function Page() {
               Ages 6-12. Building emotional intelligence, resilience, and confidence.
             </p>
             <a
-              href="https://calendly.com/tinamujera/30min?utm_source=coachtina&utm_medium=website&utm_campaign=discovery_call&utm_content=empower_u_explorers"
+              href="https://calendly.com/tinamujera/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-lg text-white font-medium transition-all hover:scale-105 shadow-lg"
