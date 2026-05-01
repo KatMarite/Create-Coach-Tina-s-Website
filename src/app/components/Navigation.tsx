@@ -53,16 +53,26 @@ export function Navigation() {
       label: 'Transformation Hub',
       href: null,
       children: [
-        { label: 'Transformation Hub Landing', href: '/transformation-hub' },
-        { label: 'Corporate Leadership', href: '/corporate-leadership' },
-        { label: 'Life & Purpose', href: '/life-and-purpose' },
-        { label: 'Healing Circles', href: '/healing-circles' },
+        { label: 'Hub Overview', href: '/transformation-hub' },
+        { label: 'Lead From Within Framework', href: '/transformation-hub/lead-from-within' },
+        { label: 'Transitions Intensive', href: '/transformation-hub/transitions-intensive' },
+        { label: 'High-Functioning Anxiety Reset', href: '/transformation-hub/high-functioning-anxiety' },
+        { label: 'Women in Leadership', href: '/transformation-hub/women-in-leadership' },
+        { label: 'Workplace Wellness & Resilience', href: '/transformation-hub/workplace-wellness' },
+        { label: 'Organisational Change Management', href: '/transformation-hub/organisational-change' },
+        { label: 'Emotional Intelligence for Leaders', href: '/transformation-hub/emotional-intelligence' },
       ],
     },
     {
-      label: 'Empower U Academy',
-      href: '/empower-u',
-      children: null,
+      label: 'Empower U Kids Coaching',
+      href: null,
+      children: [
+        { label: 'Empower U Explorers (Ages 6–12)', href: '/empower-u/explorers' },
+        { label: 'Empower U Achievers (Ages 13–18)', href: '/empower-u/achievers' },
+        { label: 'Empowering Parents', href: '/empower-u/parents' },
+        { label: 'Workshops', href: '/empower-u/workshops' },
+        { label: 'Coaching Framework', href: '/empower-u/framework' },
+      ],
     },
     {
       label: 'Shop',
@@ -129,29 +139,60 @@ export function Navigation() {
                     <a href="/transformation-hub" className="w-full">Hub Overview</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="/corporate-leadership" className="w-full">Corporate Leadership</a>
+                    <a href="/transformation-hub/lead-from-within" className="w-full">Lead From Within Framework</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="/life-and-purpose" className="w-full">Life & Purpose</a>
+                    <a href="/transformation-hub/transitions-intensive" className="w-full">Transitions Intensive</a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <a href="/healing-circles" className="w-full">Healing Circles</a>
+                    <a href="/transformation-hub/high-functioning-anxiety" className="w-full">High-Functioning Anxiety Reset</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="/transformation-hub/women-in-leadership" className="w-full">Women in Leadership</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="/transformation-hub/workplace-wellness" className="w-full">Workplace Wellness & Resilience</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="/transformation-hub/organisational-change" className="w-full">Organisational Change Management</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="/transformation-hub/emotional-intelligence" className="w-full">Emotional Intelligence for Leaders</a>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <a
-                href="/empower-u"
-                className="relative group"
-              >
-                <span className={`text-sm tracking-wide transition-colors hover:opacity-70 ${isActive('/empower-u') ? 'font-semibold' : 'font-light'}`} style={{ color: 'var(--charcoal)' }}>
-                  Empower U Academy
-                </span>
-                <span
-                  className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${isActive('/empower-u') ? 'w-full' : 'w-0 group-hover:w-full'}`}
-                  style={{ backgroundColor: 'var(--sage-green)' }}
-                />
-              </a>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="relative group">
+                  <span className={`text-sm tracking-wide transition-colors hover:opacity-70 flex items-center gap-1 ${isDropdownActive(['/empower-u']) ? 'font-semibold' : 'font-light'}`} style={{ color: 'var(--charcoal)' }}>
+                    Empower U Kids Coaching
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                  <span
+                    className={`absolute bottom-0 left-0 h-0.5 transition-all duration-300 ${isDropdownActive(['/empower-u']) ? 'w-full' : 'w-0 group-hover:w-full'}`}
+                    style={{ backgroundColor: 'var(--sage-green)' }}
+                  />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-64">
+                  <DropdownMenuItem>
+                    <a href="/empower-u/explorers" className="w-full">Empower U Explorers (Ages 6–12)</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="/empower-u/achievers" className="w-full">Empower U Achievers (Ages 13–18)</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="/empower-u/parents" className="w-full">Empowering Parents</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="/empower-u/workshops" className="w-full">Workshops</a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <a href="/empower-u/framework" className="w-full">Coaching Framework</a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               <a
                 href="/shop"
