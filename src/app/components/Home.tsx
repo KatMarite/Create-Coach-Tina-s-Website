@@ -289,7 +289,7 @@ export function Home() {
       </section>
 
       {/* SECTION 6 — Closing Invitation */}
-      <section className="bg-charcoal py-20 text-center" style={{ backgroundColor: 'var(--charcoal)' }}>
+      <section className="py-20 text-center" style={{ backgroundColor: '#2a5934' }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-12 text-white">
           <FadeIn>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 leading-tight text-white">
