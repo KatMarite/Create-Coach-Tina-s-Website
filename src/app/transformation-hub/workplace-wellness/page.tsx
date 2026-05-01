@@ -21,7 +21,7 @@ export default function Page() {
               Fostering resilience and well-being in corporate environments.
             </p>
             <a
-              href="https://calendly.com/tinamujera/30min?utm_source=coachtina&utm_medium=website&utm_campaign=discovery_call&utm_content=trans_hub_wellness"
+              href="https://calendly.com/tinamujera/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-lg text-white font-medium transition-all hover:scale-105 shadow-lg"
