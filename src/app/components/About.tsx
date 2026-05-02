@@ -1,4 +1,5 @@
 import { FadeIn } from './FadeIn';
+import { TestimonialSlider } from './TestimonialSlider';
 
 export function About() {
   return (
@@ -135,6 +136,14 @@ export function About() {
           </a>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <TestimonialSlider
+        title="In Their Own Words"
+        subtitle="Leaders, professionals, and families share the impact of working with Coach Tina."
+        showCaseStudies={true}
+        bgClassName="bg-gray-50 border-t border-gray-200"
+      />
     </div>
   );
 }

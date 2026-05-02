@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FadeIn } from './FadeIn';
+import { TestimonialSlider } from './TestimonialSlider';
 
 const heroImages = [
   { src: '/images/hero-2.jpg', alt: 'Coach Tina leading a coaching session' },
@@ -203,6 +204,14 @@ export function Home() {
           </FadeIn>
         </div>
       </section>
+
+      {/* SECTION — Social Proof: Testimonials + Case Studies */}
+      <TestimonialSlider
+        title="What Our Clients Say"
+        subtitle="Real transformation. Real people. Measurable impact."
+        showCaseStudies={true}
+        bgClassName="bg-gray-50 border-y border-gray-200"
+      />
 
       {/* SECTION 4 — Featured Work */}
       <section className="bg-gray-50 py-16 sm:py-20 border-t border-gray-200">

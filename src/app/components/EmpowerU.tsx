@@ -1,6 +1,31 @@
 import { FadeIn } from './FadeIn';
+import { TestimonialSlider, allTestimonials } from './TestimonialSlider';
+import type { Testimonial } from './TestimonialSlider';
 
 export function EmpowerU() {
+  // Extra youth-specific testimonials for this page
+  const youthTestimonials: Testimonial[] = [
+    ...allTestimonials.filter((t) => t.category === 'youth'),
+    {
+      id: 'y3',
+      name: 'Amanda V.',
+      role: 'Mother of Two Explorers (Ages 7 & 11)',
+      category: 'youth',
+      rating: 5,
+      content:
+        "I enrolled both my kids in the Explorers programme and the transformation has been remarkable. They now talk about feelings at the dinner table, resolve their own conflicts, and my youngest even taught ME a breathing technique she learnt in class!",
+    },
+    {
+      id: 'y4',
+      name: 'James N.',
+      role: 'Father & School Governing Body Chair',
+      category: 'youth',
+      rating: 5,
+      content:
+        "We invited Coach Tina to run a workshop at our school and the feedback was overwhelmingly positive. Teachers noticed a visible shift in how learners communicated. We've since booked a full-term Empower U programme.",
+    },
+  ];
+
   return (
     <div className="pt-24 sm:pt-28 md:pt-32 pb-16 bg-white min-h-screen">
       {/* Hero Section */}
@@ -100,6 +125,38 @@ export function EmpowerU() {
                 </ul>
               </div>
 
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Testimonials — Youth Focused */}
+      <TestimonialSlider
+        title="What Parents & Families Are Saying"
+        subtitle="Real impact on real young lives—straight from the families we serve."
+        showCaseStudies={false}
+        customTestimonials={youthTestimonials}
+        bgClassName="bg-white"
+      />
+
+      {/* CTA Section */}
+      <section className="py-20 text-center relative overflow-hidden" style={{ backgroundColor: '#2a5934' }}>
+        <img src="/images/watermark.png" alt="" className="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-overlay pointer-events-none" />
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-12 text-white relative z-10">
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 leading-tight text-white">
+              Every child deserves the tools<br />to lead their own life.
+            </h2>
+            <p className="text-xl font-light mb-10 text-gray-300">
+              Give them the gift of confidence, emotional literacy, and resilience.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl text-center font-bold" style={{ backgroundColor: 'var(--teu-yellow)', color: 'var(--charcoal)' }}>
+                Enquire About a Programme
+              </a>
+              <a href="/free-tools" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-white/10 text-center text-white border-white">
+                Download the Children's Toolkit
+              </a>
             </div>
           </FadeIn>
         </div>
