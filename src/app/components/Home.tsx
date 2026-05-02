@@ -3,9 +3,9 @@ import { FadeIn } from './FadeIn';
 import { TestimonialSlider } from './TestimonialSlider';
 
 const heroImages = [
-  { src: '/images/hero-2.jpg', alt: 'Coach Tina leading a coaching session' },
-  { src: '/images/hero-1.jpg', alt: 'Professional coaching consultation' },
-  { src: '/images/hero-3.jpeg', alt: 'Coach Tina portrait' },
+  { src: '/images/img2.jpg', alt: 'Coach Tina leading a coaching session' },
+  { src: '/images/img3.jpg', alt: 'Professional coaching consultation' },
+  { src: '/images/img1.jpg', alt: 'Coach Tina portrait' },
 ];
 
 export function Home() {
