@@ -73,12 +73,15 @@ export function Podcast() {
             </div>
 
             <div className="pt-4">
-              <button
-                className="px-8 py-3 rounded-lg transition-all hover:shadow-lg hover:scale-105"
+              <a
+                href="https://open.spotify.com/show/6T2PQp6kkG2s1k3KoIphgv?si=0e02ee1ffcb644e4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-3 rounded-lg transition-all hover:shadow-lg hover:scale-105"
                 style={{ backgroundColor: 'var(--charcoal)', color: 'white' }}
               >
-                View All Episodes
-              </button>
+                Listen to Podcast
+              </a>
             </div>
           </div>
 

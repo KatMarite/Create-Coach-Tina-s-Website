@@ -19,10 +19,10 @@ export function Media() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center flex items-center justify-center" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
+                <a href="https://open.spotify.com/show/6T2PQp6kkG2s1k3KoIphgv?si=0e02ee1ffcb644e4" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center flex items-center justify-center" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" /></svg>
                   Listen to the Podcast
-                </button>
+                </a>
                 <a href="https://calendly.com/tinamujera/30min" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-center" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
                   Book Coach Tina to Speak
                 </a>
@@ -50,34 +50,83 @@ export function Media() {
               Latest Episodes
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3].map((item) => (
-                <div key={item} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
-                  <div className="aspect-video bg-gray-200 rounded-lg mb-4 overflow-hidden relative group">
-                    <img src="/images/hero-2.jpg" alt="Episode cover" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg" style={{ color: 'var(--sage-green)' }}>
-                        <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" /></svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
-                    <span>Episode {10 - item}</span>
-                    <span>•</span>
-                    <span>45 min</span>
-                  </div>
-                  <h3 className="text-xl font-medium mb-2" style={{ color: 'var(--charcoal)' }}>Navigating Leadership Transitions with Grace</h3>
-                  <p className="text-gray-600 font-light flex-grow mb-4 text-sm line-clamp-2">In this episode, Coach Tina breaks down the emotional and strategic steps required to transition into higher leadership roles without losing your authentic self.</p>
-                  <button className="text-sm font-medium flex items-center hover:opacity-70 transition-opacity" style={{ color: 'var(--sage-green)' }}>
-                    Listen Now <span className="ml-1">→</span>
-                  </button>
+              {/* Episode 9 - Featured Spotify Embed */}
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                <div className="aspect-video rounded-lg mb-4 overflow-hidden">
+                  <iframe
+                    style={{ borderRadius: '12px' }}
+                    src="https://open.spotify.com/embed/episode/6sqMbjpHrr4ksOXYCTAlYj/video?utm_source=generator"
+                    width="100%"
+                    height="100%"
+                    frameBorder={0}
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  />
                 </div>
-              ))}
+                <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
+                  
+                </div>
+                <h3 className="text-xl font-medium mb-2" style={{ color: 'var(--charcoal)' }}>Marked for More - Ditching Fear and Stepping into Your Calling</h3>
+                <p className="text-gray-600 font-light flex-grow mb-4 text-sm line-clamp-2">In this raw and soul-stirring conversation, we sit down with Nicole Netshivhungululu—speaker, digital strategist, CEO of ICCIN Creative, and Co-Founder of Marked Women.</p>
+                <a href="https://open.spotify.com/show/6T2PQp6kkG2s1k3KoIphgv?si=0e02ee1ffcb644e4" target="_blank" rel="noopener noreferrer" className="text-sm font-medium flex items-center hover:opacity-70 transition-opacity" style={{ color: 'var(--sage-green)' }}>
+                  Listen Now <span className="ml-1">→</span>
+                </a>
+              </div>
+
+              {/* Episode 8 - Spotify Embed */}
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                <div className="aspect-video rounded-lg mb-4 overflow-hidden">
+                  <iframe
+                    style={{ borderRadius: '12px' }}
+                    src="https://open.spotify.com/embed/episode/3jFOsNVpfriZ4XoLnt127V/video?utm_source=generator"
+                    width="100%"
+                    height="100%"
+                    frameBorder={0}
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
+                  
+                </div>
+                <h3 className="text-xl font-medium mb-2" style={{ color: 'var(--charcoal)' }}>No More Shame: How to Rewrite Your Story and Step into Your Purpose</h3>
+                <p className="text-gray-600 font-light flex-grow mb-4 text-sm line-clamp-2">In this powerful episode of the Faith in Action Podcast, we sit down with Thabi M, a licensed therapist, mental wellness educator, and woman of deep faith, to unpack how shame holds us back—and how healing can move us forward</p>
+                <a href="https://open.spotify.com/show/6T2PQp6kkG2s1k3KoIphgv?si=0e02ee1ffcb644e4" target="_blank" rel="noopener noreferrer" className="text-sm font-medium flex items-center hover:opacity-70 transition-opacity" style={{ color: 'var(--sage-green)' }}>
+                  Listen Now <span className="ml-1">→</span>
+                </a>
+              </div>
+
+              {/* Episode 7 - Spotify Embed */}
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                <div className="aspect-video rounded-lg mb-4 overflow-hidden">
+                  <iframe
+                    style={{ borderRadius: '12px' }}
+                    src="https://open.spotify.com/embed/episode/5iKFc9Y6EKZeulTBFlV8Nh/video?utm_source=generator"
+                    width="100%"
+                    height="100%"
+                    frameBorder={0}
+                    allowFullScreen
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
+                  
+                </div>
+                <h3 className="text-xl font-medium mb-2" style={{ color: 'var(--charcoal)' }}>Mastering Emotions, Money, and Leadership through Faith with Dr. Mavis Mazhura</h3>
+                <p className="text-gray-600 font-light flex-grow mb-4 text-sm line-clamp-2">What happens when faith meets emotional intelligence and leadership? In this enlightening episode of the Faith in Action Podcast, we sit down with Dr. Mavis Mazhura—an award-winning Leadership Psychologist, International Behavioral Science Specialist, and author of Managing Emotions for Financial Freedom.</p>
+                <a href="https://open.spotify.com/show/6T2PQp6kkG2s1k3KoIphgv?si=0e02ee1ffcb644e4" target="_blank" rel="noopener noreferrer" className="text-sm font-medium flex items-center hover:opacity-70 transition-opacity" style={{ color: 'var(--sage-green)' }}>
+                  Listen Now <span className="ml-1">→</span>
+                </a>
+              </div>
             </div>
             
             <div className="text-center mt-12">
-              <button className="px-6 py-3 rounded-lg border transition-all hover:bg-gray-50" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
+              <a href="https://open.spotify.com/show/6T2PQp6kkG2s1k3KoIphgv?si=0e02ee1ffcb644e4" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 rounded-lg border transition-all hover:bg-gray-50" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
                 View All Episodes
-              </button>
+              </a>
             </div>
           </FadeIn>
         </div>
