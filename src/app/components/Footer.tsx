@@ -2,8 +2,8 @@ import { Mail, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-10 sm:py-12 md:py-16">
+    <footer className="bg-white border-t border-gray-200 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-10 sm:py-12 md:py-16 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-10 sm:mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 space-y-4">
@@ -88,8 +88,17 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Background Watermark */}
+        <div className="relative pointer-events-none">
+          <img 
+            src="/images/water2.png" 
+            alt="" 
+            className="absolute bottom-0 -right-4 w-64 sm:w-80 md:w-96 object-contain opacity-40 z-0" 
+          />
+        </div>
+
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 relative z-10">
           <p className="text-sm font-light" style={{ color: '#9ca3af' }}>
             © 2026 Coach Tina. All rights reserved.
           </p>

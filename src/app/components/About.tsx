@@ -26,7 +26,7 @@ export function About() {
             <div className="relative">
               <div className="aspect-[4/5] max-w-md mx-auto overflow-hidden rounded-2xl shadow-xl">
                 <img
-                  src="/images/meet1.jpg"
+                  src="/images/img1.jpg"
                   alt="Coach Tina warm portrait"
                   className="w-full h-full object-cover"
                 />
