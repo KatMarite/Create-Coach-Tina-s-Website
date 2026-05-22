@@ -243,21 +243,21 @@ export function About() {
             >
               The Journey Behind the Work
             </h2>
-
-            <div className="space-y-4 text-lg font-light text-gray-700">
-              <p>Corporate Strategy</p>
-              <p>↓</p>
-              <p>Coaching & Facilitation</p>
-              <p>↓</p>
-              <p>Books & Podcast</p>
-              <p>↓</p>
-              <p>Empower U Academy</p>
-              <p>↓</p>
-              <p>Authentically Woman</p>
-              <p>↓</p>
-              <p className="font-medium text-black">Transformation Hub</p>
-            </div>
           </FadeIn>
+
+          <div className="space-y-4 text-lg font-light text-gray-700">
+            <FadeIn delay={100}><p>Corporate Strategy</p></FadeIn>
+            <FadeIn delay={200}><p>↓</p></FadeIn>
+            <FadeIn delay={300}><p>Coaching & Facilitation</p></FadeIn>
+            <FadeIn delay={400}><p>↓</p></FadeIn>
+            <FadeIn delay={500}><p>Books & Podcast</p></FadeIn>
+            <FadeIn delay={600}><p>↓</p></FadeIn>
+            <FadeIn delay={700}><p>Empower U Academy</p></FadeIn>
+            <FadeIn delay={800}><p>↓</p></FadeIn>
+            <FadeIn delay={900}><p>Authentically Woman</p></FadeIn>
+            <FadeIn delay={1000}><p>↓</p></FadeIn>
+            <FadeIn delay={1100}><p className="font-medium text-black">Transformation Hub</p></FadeIn>
+          </div>
         </div>
       </section>
 

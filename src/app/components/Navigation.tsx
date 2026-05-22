@@ -96,31 +96,33 @@ export function Navigation() {
                   <ChevronDown className="w-3 h-3" />
                 </button>
 
-                <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-white shadow-lg border rounded-lg w-56">
-                  <a
-                    className="block px-4 py-2 hover:bg-gray-50"
-                    href="/life-and-purpose"
-                  >
-                    1:1 Coaching
-                  </a>
-                  <a
-                    className="block px-4 py-2 hover:bg-gray-50"
-                    href="/corporate-leadership"
-                  >
-                    Corporate Facilitation
-                  </a>
-                  <a
-                    className="block px-4 py-2 hover:bg-gray-50"
-                    href="/healing-circles"
-                  >
-                    Healing Circles
-                  </a>
-                  <a
-                    className="block px-4 py-2 hover:bg-gray-50"
-                    href="/speaking"
-                  >
-                    Speaking
-                  </a>
+                <div className="absolute top-full left-0 pt-2 hidden group-hover:block w-56">
+                  <div className="bg-white shadow-lg border rounded-lg py-1">
+                    <a
+                      className="block px-4 py-2 hover:bg-gray-50"
+                      href="/life-and-purpose"
+                    >
+                      1:1 Coaching
+                    </a>
+                    <a
+                      className="block px-4 py-2 hover:bg-gray-50"
+                      href="/corporate-leadership"
+                    >
+                      Corporate Facilitation
+                    </a>
+                    <a
+                      className="block px-4 py-2 hover:bg-gray-50"
+                      href="/healing-circles"
+                    >
+                      Healing Circles
+                    </a>
+                    <a
+                      className="block px-4 py-2 hover:bg-gray-50"
+                      href="/speaking"
+                    >
+                      Speaking
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -134,25 +136,27 @@ export function Navigation() {
                   <ChevronDown className="w-3 h-3" />
                 </button>
 
-                <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-white shadow-lg border rounded-lg w-64">
-                  <a
-                    className="block px-4 py-2 hover:bg-gray-50"
-                    href="/empower-u/explorers"
-                  >
-                    Explorers (6–12)
-                  </a>
-                  <a
-                    className="block px-4 py-2 hover:bg-gray-50"
-                    href="/empower-u/achievers"
-                  >
-                    Achievers (13–18)
-                  </a>
-                  <a
-                    className="block px-4 py-2 hover:bg-gray-50"
-                    href="/empower-u/parents"
-                  >
-                    Parents
-                  </a>
+                <div className="absolute top-full left-0 pt-2 hidden group-hover:block w-64">
+                  <div className="bg-white shadow-lg border rounded-lg py-1">
+                    <a
+                      className="block px-4 py-2 hover:bg-gray-50"
+                      href="/empower-u/explorers"
+                    >
+                      Explorers (6–12)
+                    </a>
+                    <a
+                      className="block px-4 py-2 hover:bg-gray-50"
+                      href="/empower-u/achievers"
+                    >
+                      Achievers (13–18)
+                    </a>
+                    <a
+                      className="block px-4 py-2 hover:bg-gray-50"
+                      href="/empower-u/parents"
+                    >
+                      Parents
+                    </a>
+                  </div>
                 </div>
               </div>
 

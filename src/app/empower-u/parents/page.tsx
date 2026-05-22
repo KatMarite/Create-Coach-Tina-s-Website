@@ -63,7 +63,7 @@ export default function Page() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-200 relative group">
-              <img src="/images/meet1.jpg" alt="Parent Coaching" className="w-full h-full object-cover" />
+              <img src="/images/parents.jpeg" alt="Parent Coaching" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all" />
             </div>
             <div>

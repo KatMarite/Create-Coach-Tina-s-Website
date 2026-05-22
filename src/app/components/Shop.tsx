@@ -1,4 +1,7 @@
+"use client";
+
 import { FadeIn } from './FadeIn';
+import { useCart } from '../context/CartContext';
 
 const products = [
   {
@@ -11,7 +14,7 @@ const products = [
     delivery: 'Ships nationwide in South Africa',
     description:
       'A faith-rooted guide for anyone navigating change, uncertainty, or identity shifts — helping you move from disorientation to divine orientation.',
-    cta: 'Order Now',
+    cta: 'Add to Cart',
     featured: true,
     accent: 'var(--sage-green)',
   },
@@ -20,12 +23,10 @@ const products = [
     type: 'Business Workbook',
     image: '/images/book4.jpeg',
     price: 'R 300.00',
-    status: 'Coming Soon',
-    format: 'Digital workbook (PDF)',
-    delivery: 'Instant download upon release',
+    status: 'Available Now',
     description:
       'A practical, soul-led marketing workbook for entrepreneurs who want to build a brand with clarity, authenticity, and strategic visibility.',
-    cta: 'Join Waitlist',
+    cta: 'Add to Cart',
     featured: false,
     accent: 'var(--charcoal)',
   },
@@ -35,11 +36,9 @@ const products = [
     image: '/images/book5.jpeg',
     price: 'R 250.00',
     status: 'Available Now',
-    format: 'Physical book',
-    delivery: 'Ships nationwide in South Africa',
     description:
       'A powerful testimony of healing, faith, and surrender — sharing how God restores identity and purpose through every season.',
-    cta: 'Order Now',
+    cta: 'Add to Cart',
     featured: false,
     accent: 'var(--sage-green)',
   },
@@ -48,18 +47,18 @@ const products = [
     type: "Children's Book",
     image: '/images/book2.jpeg',
     price: 'R 180.00',
-    status: 'Pre-Order',
-    format: 'Physical book',
-    delivery: 'Expected dispatch within 2–3 weeks',
+    status: 'Available Now',
     description:
       'A joyful children’s book that helps young readers discover courage, creativity, confidence, empathy, resilience, and the sparkle within them.',
-    cta: 'Pre-Order',
+    cta: 'Add to Cart',
     featured: false,
     accent: 'var(--teu-yellow)',
   },
 ];
 
 export function Shop() {
+  const { addToCart } = useCart();
+
   return (
     <div className="pt-24 sm:pt-28 md:pt-32 pb-16 bg-white min-h-screen">
       {/* Hero Section */}
@@ -186,20 +185,7 @@ export function Shop() {
                     {product.description}
                   </p>
 
-                  {/* Product Info */}
-                  <div className="space-y-3 text-sm mb-6">
-                    <div className="flex items-start gap-2">
-                      <span className="font-medium text-gray-800">Format:</span>
-                      <span className="text-gray-600">{product.format}</span>
-                    </div>
 
-                    <div className="flex items-start gap-2">
-                      <span className="font-medium text-gray-800">
-                        Delivery:
-                      </span>
-                      <span className="text-gray-600">{product.delivery}</span>
-                    </div>
-                  </div>
 
                   {/* Footer */}
                   <div className="mt-auto pt-5 border-t border-gray-200 flex items-center justify-between">
@@ -211,18 +197,15 @@ export function Shop() {
                     </span>
 
                     <button
+                      onClick={() => addToCart({
+                        title: product.title,
+                        price: product.price,
+                        image: product.image
+                      })}
                       className="px-4 py-2 rounded-lg text-sm font-medium transition-all hover:opacity-90"
                       style={{
-                        backgroundColor:
-                          product.status === 'Coming Soon'
-                            ? '#E5E7EB'
-                            : product.accent,
-                        color:
-                          product.status === 'Coming Soon'
-                            ? '#374151'
-                            : product.accent === 'var(--teu-yellow)'
-                              ? 'var(--charcoal)'
-                              : 'white',
+                        backgroundColor: 'var(--sage-green)',
+                        color: 'white',
                       }}
                     >
                       {product.cta}
@@ -247,13 +230,12 @@ export function Shop() {
             </h2>
 
             <p className="text-gray-600 font-light leading-relaxed mb-8">
-              Some products are available immediately, while others are offered
-              as pre-orders or coming soon. Physical books are shipped within
-              South Africa, and digital workbooks are delivered instantly via
-              email.
+              All products listed are available immediately. Physical books are
+              shipped within South Africa, and digital workbooks are delivered
+              instantly via email.
             </p>
 
-            <div className="grid sm:grid-cols-3 gap-6 text-left">
+            <div className="grid sm:grid-cols-2 gap-6 text-left">
               <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                 <h3
                   className="font-medium mb-2"
@@ -275,18 +257,6 @@ export function Shop() {
                 </h3>
                 <p className="text-sm text-gray-600 font-light">
                   PDF resources sent instantly after purchase.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                <h3
-                  className="font-medium mb-2"
-                  style={{ color: 'var(--charcoal)' }}
-                >
-                  Pre-Orders
-                </h3>
-                <p className="text-sm text-gray-600 font-light">
-                  Reserve upcoming releases before they officially launch.
                 </p>
               </div>
             </div>

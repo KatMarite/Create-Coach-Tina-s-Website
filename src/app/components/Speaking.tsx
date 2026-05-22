@@ -275,8 +275,8 @@ export function Speaking() {
                 and brands across South Africa and beyond.
               </p>
 
-              <div className="flex overflow-hidden w-full gap-10 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] py-4">
-                <div className="flex gap-10 animate-marquee opacity-60 items-center shrink-0">
+              <div className="flex overflow-hidden w-full [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] py-4">
+                <div className="flex gap-10 pr-10 animate-marquee opacity-60 items-center shrink-0">
                   <img
                     src="/images/kfc.png"
                     alt="KFC Africa"
@@ -323,7 +323,7 @@ export function Speaking() {
                 </div>
 
                 <div
-                  className="flex gap-10 animate-marquee opacity-60 items-center shrink-0"
+                  className="flex gap-10 pr-10 animate-marquee opacity-60 items-center shrink-0"
                   aria-hidden="true"
                 >
                   <img

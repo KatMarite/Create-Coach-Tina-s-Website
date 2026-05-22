@@ -79,23 +79,32 @@ export function HealingCircles() {
 
       {/* WHAT HAPPENS IN THE CIRCLE */}
       <section className="bg-gray-50 py-16 border-y border-gray-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
           <FadeIn>
-            <h2
-              className="text-3xl font-serif mb-10 text-center"
-              style={{ color: 'var(--charcoal)' }}
-            >
-              What Happens in the Circle
-            </h2>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] bg-gray-200 relative group">
+                <img src="/images/hcircle.jpeg" alt="Healing Circle" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all" />
+              </div>
+              
+              <div>
+                <h2
+                  className="text-3xl font-serif mb-8"
+                  style={{ color: 'var(--charcoal)' }}
+                >
+                  What Happens in the Circle
+                </h2>
 
-            <div className="space-y-4 text-gray-700 font-light">
-              <p>Guided reflection and gentle coaching prompts.</p>
-              <p>Honest, safe conversation without judgement or pressure.</p>
-              <p>Faith-rooted encouragement and grounding.</p>
-              <p>Journaling exercises for emotional clarity.</p>
-              <p>Optional sharing in a supportive, non-performative space.</p>
-              <p>Prayer, grounding, and emotional reset practices.</p>
-              <p>Practical tools to help you re-enter life with steadiness.</p>
+                <div className="space-y-4 text-gray-700 font-light">
+                  <p>Guided reflection and gentle coaching prompts.</p>
+                  <p>Honest, safe conversation without judgement or pressure.</p>
+                  <p>Faith-rooted encouragement and grounding.</p>
+                  <p>Journaling exercises for emotional clarity.</p>
+                  <p>Optional sharing in a supportive, non-performative space.</p>
+                  <p>Prayer, grounding, and emotional reset practices.</p>
+                  <p>Practical tools to help you re-enter life with steadiness.</p>
+                </div>
+              </div>
             </div>
           </FadeIn>
         </div>

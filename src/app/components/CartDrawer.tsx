@@ -26,22 +26,26 @@ export function CartDrawer() {
     e.preventDefault();
     
     // Basic implementation for Payfast checkout integration
-    // USING SANDBOX CREDENTIALS FOR TESTING.
-    const merchantId = '10000100'; 
-    const merchantKey = '46f0cd694581a';
+    const merchantId = '18106508'; 
+    const merchantKey = 't5msk0zgj9cqi';
     
     const form = document.createElement('form');
     form.method = 'POST';
-    form.action = 'https://sandbox.payfast.co.za/eng/process'; // Change to www.payfast.co.za for production
+    form.action = 'https://www.payfast.co.za/eng/process';
     
     // Construct the item names based on cart items
     const itemNames = items.map(item => `${item.title} (x${item.quantity})`).join(', ');
 
+    // Prevent Payfast CloudFront WAF from blocking requests containing "localhost"
+    const baseUrl = window.location.origin.includes('localhost') 
+      ? 'https://www.coachtina.co.za' 
+      : window.location.origin;
+
     const fields = {
       merchant_id: merchantId,
       merchant_key: merchantKey,
-      return_url: window.location.origin, 
-      cancel_url: window.location.origin,
+      return_url: baseUrl, 
+      cancel_url: baseUrl,
       amount: cartTotal.toFixed(2),
       item_name: itemNames.length > 250 ? 'Coach Tina Cart Purchase' : itemNames,
       name_first: formData.firstName,

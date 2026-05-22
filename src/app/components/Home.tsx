@@ -112,8 +112,8 @@ export function Home() {
               As seen on leading platforms. Trusted by respected organisations
               and brands across South Africa and beyond.
             </p>
-            <div className="flex overflow-hidden w-full gap-10 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] py-4">
-              <div className="flex gap-10 animate-marquee opacity-60 items-center shrink-0">
+            <div className="flex overflow-hidden w-full [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] py-4">
+              <div className="flex gap-10 pr-10 animate-marquee opacity-60 items-center shrink-0">
                 <img
                   src="/images/kfc.png"
                   alt="KFC Africa"
@@ -159,7 +159,7 @@ export function Home() {
                 />
               </div>
               <div
-                className="flex gap-10 animate-marquee opacity-60 items-center shrink-0"
+                className="flex gap-10 pr-10 animate-marquee opacity-60 items-center shrink-0"
                 aria-hidden="true"
               >
                 <img
@@ -404,7 +404,7 @@ export function Home() {
             <div className="order-2 lg:order-1 relative">
               <div className="aspect-square max-w-md mx-auto overflow-hidden rounded-full shadow-xl border-8 border-gray-50">
                 <img
-                  src="/images/meet1.jpg"
+                  src="/images/tina1.jpeg"
                   alt="Coach Tina Portrait"
                   className="w-full h-full object-cover"
                 />
@@ -560,7 +560,7 @@ export function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
                 <img
-                  src="/images/book5.jpeg"
+                  src="/images/book10.jpeg"
                   alt="Transitions Book"
                   className="w-full h-64 object-cover object-top"
                 />
@@ -573,12 +573,12 @@ export function Home() {
               </div>
               <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
                 <img
-                  src="/images/book3.png"
+                  src="/images/book5.jpeg"
                   alt="NaShe Book"
                   className="w-full h-64 object-cover object-top"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-medium mb-2">NaShe</h3>
+                  <h3 className="text-xl font-medium mb-2">NaShe - With God</h3>
                   <p className="text-gray-600">
                     Healing, wholeness and becoming.
                   </p>

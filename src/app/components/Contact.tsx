@@ -59,10 +59,6 @@ export function Contact() {
                   <ExternalLink className="w-5 h-5 mr-2" />
                   Book via Calendly
                 </a>
-                <a href="https://calendly.com/tinamujera/30min" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-center flex items-center justify-center font-medium" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
-                  <Mail className="w-5 h-5 mr-2" />
-                  Email: bookings@coachtina.co.za
-                </a>
               </div>
             </div>
 
@@ -96,7 +92,7 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="challenge" className="block text-sm font-medium text-gray-700 mb-1">What is the primary challenge keeping you from your ‘Rise’ phase?</label>
+                    <label htmlFor="challenge" className="block text-sm font-medium text-gray-700 mb-1">What kind of support are you looking for, and what outcome would you like to create in the next 90 days?</label>
                     <textarea id="challenge" name="challenge" required rows={3} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--sage-green)] focus:border-transparent resize-none" placeholder="Describe your challenge..."></textarea>
                   </div>
 
