@@ -21,28 +21,60 @@ export function Home() {
   return (
     <div className="pt-24 sm:pt-28 md:pt-32 pb-12">
       {/* HERO SECTION */}
-      <section id="hero" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 md:py-20 w-full">
+      <section
+        id="hero"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 md:py-20 w-full"
+      >
         <FadeIn>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-12 sm:mb-16 md:mb-20">
             {/* Left - Text Content */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight" style={{ color: 'var(--charcoal)' }}>
+                <h1
+                  className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight"
+                  style={{ color: 'var(--charcoal)' }}
+                >
                   Reset. Realign. Rise.
                 </h1>
-                <p className="text-lg sm:text-xl md:text-2xl font-light leading-relaxed max-w-xl" style={{ color: '#374151' }}>
-                  Transformational coaching and practical tools for clarity, confidence, and wholeness—backed by 13+ years of commercial leadership experience, a Master's in Commerce, and accredited NLP mastery.
+                <p
+                  className="text-lg sm:text-xl md:text-2xl font-light leading-relaxed max-w-xl"
+                  style={{ color: '#374151' }}
+                >
+                  Transformational coaching and practical tools for clarity,
+                  confidence, and wholeness—backed by 13+ years of commercial
+                  leadership experience, a Master's in Commerce, and accredited
+                  NLP mastery.
                 </p>
-                <p className="text-base sm:text-lg font-medium italic" style={{ color: 'var(--sage-green)' }}>
-                  If you’ve been functioning… but not flourishing—this is your reset point.
+                <p
+                  className="text-base sm:text-lg font-medium italic"
+                  style={{ color: 'var(--sage-green)' }}
+                >
+                  If you’ve been functioning… but not flourishing—this is your
+                  reset point.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="https://calendly.com/tinamujera/30min" target="_blank" rel="noopener noreferrer" className="text-center px-8 py-4 rounded-lg transition-all hover:shadow-xl hover:scale-105 font-medium" style={{ backgroundColor: 'var(--teu-yellow)', color: 'var(--charcoal)' }}>
+                <a
+                  href="https://calendly.com/tinamujera/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center px-8 py-4 rounded-lg transition-all hover:shadow-xl hover:scale-105 font-medium"
+                  style={{
+                    backgroundColor: 'var(--teu-yellow)',
+                    color: 'var(--charcoal)',
+                  }}
+                >
                   Book Your Discovery Session
                 </a>
-                <a href="/transformation-hub" className="text-center px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
+                <a
+                  href="/transformation-hub"
+                  className="text-center px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50"
+                  style={{
+                    borderColor: 'var(--charcoal)',
+                    color: 'var(--charcoal)',
+                  }}
+                >
                   Explore the Transformation Hub
                 </a>
               </div>
@@ -51,7 +83,10 @@ export function Home() {
             {/* Right - Image */}
             <div className="relative lg:order-last">
               <div className="relative aspect-[3/4] max-w-md mx-auto lg:max-w-none overflow-hidden rounded-2xl shadow-2xl">
-                <div className="absolute -top-6 -left-6 w-full h-full rounded-2xl" style={{ backgroundColor: 'var(--sage-green)', opacity: 0.1 }} />
+                <div
+                  className="absolute -top-6 -left-6 w-full h-full rounded-2xl"
+                  style={{ backgroundColor: 'var(--sage-green)', opacity: 0.1 }}
+                />
                 {heroImages.map((image, index) => (
                   <img
                     key={image.src}
@@ -70,59 +105,291 @@ export function Home() {
         {/* Authority Strip */}
         <FadeIn>
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <p className="text-sm font-light mb-6 sm:mb-8" style={{ color: '#374151' }}>
-              As seen on leading platforms. Trusted by respected organisations and brands across South Africa and beyond.
+            <p
+              className="text-sm font-light mb-6 sm:mb-8"
+              style={{ color: '#374151' }}
+            >
+              As seen on leading platforms. Trusted by respected organisations
+              and brands across South Africa and beyond.
             </p>
             <div className="flex overflow-hidden w-full gap-10 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] py-4">
               <div className="flex gap-10 animate-marquee opacity-60 items-center shrink-0">
-                <img src="/images/kfc.png" alt="KFC Africa" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/spur.png" alt="Spur Group" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <span className="font-serif text-lg font-medium text-gray-500 uppercase tracking-widest shrink-0">EduBridge</span>
-                <img src="/images/truworths.png" alt="Truworths" className="h-6 md:h-8 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/comensa.jpg" alt="COMENSA" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/sabc2.png" alt="SABC 2" className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/soweto tv.jpg" alt="Soweto TV" className="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/safm.png" alt="SAfm" className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/radio pulpit.jpg" alt="Radio Pulpit" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+                <img
+                  src="/images/kfc.png"
+                  alt="KFC Africa"
+                  className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/spur.png"
+                  alt="Spur Group"
+                  className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <span className="font-serif text-lg font-medium text-gray-500 uppercase tracking-widest shrink-0">
+                  EduBridge
+                </span>
+                <img
+                  src="/images/truworths.png"
+                  alt="Truworths"
+                  className="h-6 md:h-8 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/comensa.jpg"
+                  alt="COMENSA"
+                  className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/sabc2.png"
+                  alt="SABC 2"
+                  className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/soweto tv.jpg"
+                  alt="Soweto TV"
+                  className="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/safm.png"
+                  alt="SAfm"
+                  className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/radio pulpit.jpg"
+                  alt="Radio Pulpit"
+                  className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
               </div>
-              <div className="flex gap-10 animate-marquee opacity-60 items-center shrink-0" aria-hidden="true">
-                <img src="/images/kfc.png" alt="KFC Africa" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/spur.png" alt="Spur Group" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <span className="font-serif text-lg font-medium text-gray-500 uppercase tracking-widest shrink-0">EduBridge</span>
-                <img src="/images/truworths.png" alt="Truworths" className="h-6 md:h-8 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/comensa.jpg" alt="COMENSA" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/sabc2.png" alt="SABC 2" className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/soweto tv.jpg" alt="Soweto TV" className="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/safm.png" alt="SAfm" className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
-                <img src="/images/radio pulpit.jpg" alt="Radio Pulpit" className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0" />
+              <div
+                className="flex gap-10 animate-marquee opacity-60 items-center shrink-0"
+                aria-hidden="true"
+              >
+                <img
+                  src="/images/kfc.png"
+                  alt="KFC Africa"
+                  className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/spur.png"
+                  alt="Spur Group"
+                  className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <span className="font-serif text-lg font-medium text-gray-500 uppercase tracking-widest shrink-0">
+                  EduBridge
+                </span>
+                <img
+                  src="/images/truworths.png"
+                  alt="Truworths"
+                  className="h-6 md:h-8 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/comensa.jpg"
+                  alt="COMENSA"
+                  className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/sabc2.png"
+                  alt="SABC 2"
+                  className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/soweto tv.jpg"
+                  alt="Soweto TV"
+                  className="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/safm.png"
+                  alt="SAfm"
+                  className="h-8 md:h-10 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
+                <img
+                  src="/images/radio pulpit.jpg"
+                  alt="Radio Pulpit"
+                  className="h-10 md:h-14 object-contain grayscale hover:grayscale-0 transition-all duration-300 shrink-0"
+                />
               </div>
             </div>
           </div>
         </FadeIn>
       </section>
 
+      {/* IMPACT SNAPSHOT */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+          <FadeIn>
+            <div className="text-center mb-12">
+              <p
+                className="text-sm uppercase tracking-[0.2em] font-medium mb-4"
+                style={{ color: 'var(--sage-green)' }}
+              >
+                Impact at a Glance
+              </p>
+              <h2
+                className="text-3xl sm:text-4xl md:text-5xl font-serif"
+                style={{ color: 'var(--charcoal)' }}
+              >
+                Proven Experience. Transformational Results.
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+              {[
+                { number: '13+', label: 'Years of Leadership Experience' },
+                { number: '100+', label: 'Workshops Facilitated' },
+                { number: '1,000+', label: 'Lives Impacted' },
+                { number: '4+', label: 'Books & Resources Created' },
+                { number: 'National', label: 'Media Platforms Featured On' },
+              ].map((item) => (
+                <div key={item.label} className="space-y-2">
+                  <p
+                    className="text-3xl sm:text-4xl font-serif"
+                    style={{ color: 'var(--sage-green)' }}
+                  >
+                    {item.number}
+                  </p>
+                  <p className="text-sm sm:text-base text-gray-600 leading-snug">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* THE WORK IN REAL ROOMS */}
+      <section className="bg-gray-50 py-16 sm:py-20 md:py-24 border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <FadeIn>
+            <div className="max-w-4xl mx-auto text-center mb-14">
+              <p
+                className="text-sm uppercase tracking-[0.2em] font-medium mb-4"
+                style={{ color: 'var(--sage-green)' }}
+              >
+                The Work in Real Rooms
+              </p>
+
+              <h2
+                className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6"
+                style={{ color: 'var(--charcoal)' }}
+              >
+                Transformation That Meets People Where They Are
+              </h2>
+
+              <p
+                className="text-lg sm:text-xl font-light leading-relaxed"
+                style={{ color: '#374151' }}
+              >
+                Coach Tina’s work is not theory alone. It has been carried into
+                boardrooms, classrooms, radio studios, healing circles, and
+                leadership spaces—helping people move from pressure to purpose,
+                from performance to presence, and from uncertainty to aligned
+                action.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: 'Corporate & Leadership Rooms',
+                  description:
+                    'OCM, emotional intelligence, leadership, culture, and resilience workshops for teams navigating change.',
+                  image: '/images/Corporate & Leadership rooms.jpeg',
+                },
+                {
+                  title: 'Women & Healing Spaces',
+                  description:
+                    'Faith-led circles for women rebuilding identity, voice, and wholeness.',
+                  image: '/images/women & Healing spaces.jpeg',
+                },
+
+                {
+                  title: 'Children & Teen Development',
+                  description:
+                    'Empower U programmes that build confidence, emotional literacy, resilience, and self-leadership.',
+                  image: '/images/Children & Teen development.jpeg',
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-56 object-cover"
+                  />
+
+                  <div className="p-6">
+                    <h3
+                      className="text-xl font-serif mb-3"
+                      style={{ color: 'var(--charcoal)' }}
+                    >
+                      {item.title}
+                    </h3>
+
+                    <p className="text-gray-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* SECTION 1 — What I Do */}
       <section className="bg-gray-50 py-16 sm:py-20 md:py-24 border-y border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <FadeIn>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-8" style={{ color: 'var(--charcoal)' }}>
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl font-serif mb-8"
+              style={{ color: 'var(--charcoal)' }}
+            >
               I help high-capacity people stop living in performance mode.
             </h2>
-            <div className="space-y-6 text-lg sm:text-xl font-light mb-10" style={{ color: '#374151' }}>
+            <div
+              className="space-y-6 text-lg sm:text-xl font-light mb-10"
+              style={{ color: '#374151' }}
+            >
               <p>I work with:</p>
               <ul className="list-disc text-left inline-block space-y-4">
-                <li><span className="font-medium">Leaders and teams</span> who need culture transformation, EQ and resilience.</li>
-                <li><span className="font-medium">High achievers in transitions</span> who need clarity and alignment.</li>
-                <li><span className="font-medium">Women and families</span> ready to heal deeply and live whole.</li>
+                <li>
+                  <span className="font-medium">Leaders and teams</span> who
+                  need culture transformation, EQ and resilience.
+                </li>
+                <li>
+                  <span className="font-medium">
+                    High achievers in transitions
+                  </span>{' '}
+                  who need clarity and alignment.
+                </li>
+                <li>
+                  <span className="font-medium">Women and families</span> ready
+                  to heal deeply and live whole.
+                </li>
               </ul>
               <p className="mt-8 font-medium">This is not hype.</p>
-              <p>It’s inside-out transformation—practical systems, faith-rooted clarity, and measurable movement.</p>
+              <p>
+                It’s inside-out transformation—practical systems, faith-rooted
+                clarity, and measurable movement.
+              </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/transformation-hub" className="px-8 py-4 rounded-lg transition-all hover:shadow-xl hover:scale-105" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
+              <a
+                href="/transformation-hub"
+                className="px-8 py-4 rounded-lg transition-all hover:shadow-xl hover:scale-105"
+                style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}
+              >
                 See Services
               </a>
-              <a href="/contact" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-white bg-transparent" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
+              <a
+                href="/contact"
+                className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-white bg-transparent"
+                style={{
+                  borderColor: 'var(--charcoal)',
+                  color: 'var(--charcoal)',
+                }}
+              >
                 Request a Corporate Proposal
               </a>
             </div>
@@ -136,34 +403,65 @@ export function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 relative">
               <div className="aspect-square max-w-md mx-auto overflow-hidden rounded-full shadow-xl border-8 border-gray-50">
-                <img src="/images/meet1.jpg" alt="Coach Tina Portrait" className="w-full h-full object-cover" />
+                <img
+                  src="/images/meet1.jpg"
+                  alt="Coach Tina Portrait"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="order-1 lg:order-2 space-y-6">
-              <p className="text-xl font-medium uppercase tracking-wide" style={{ color: 'var(--sage-green)' }}>
+              <p
+                className="text-xl font-medium uppercase tracking-wide"
+                style={{ color: 'var(--sage-green)' }}
+              >
                 True leadership isn’t a role; it’s a frequency.
               </p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight" style={{ color: 'var(--charcoal)' }}>
+              <h2
+                className="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight"
+                style={{ color: 'var(--charcoal)' }}
+              >
                 Transformation From the Inside Out
               </h2>
-              <div className="space-y-4 text-lg font-light" style={{ color: '#374151' }}>
+              <div
+                className="space-y-4 text-lg font-light"
+                style={{ color: '#374151' }}
+              >
                 <p>
-                  Most people try to change their lives from the outside in—chasing goals while ignoring the silent wounds that keep them stuck.
+                  Most people try to change their lives from the outside
+                  in—chasing goals while ignoring the silent wounds that keep
+                  them stuck.
                 </p>
                 <p>
-                  Sustainable change happens when your internal operating system aligns with your divine orientation.
+                  Sustainable change happens when your internal operating system
+                  aligns with your divine orientation.
                 </p>
                 <p className="font-medium pt-4">
                   We don’t just set goals.
                   <br />
-                  We build the systems, identity, and emotional fitness to sustain them.
+                  We build the systems, identity, and emotional fitness to
+                  sustain them.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="/contact" className="px-6 py-3 rounded-lg transition-all shadow-md hover:shadow-xl text-center font-bold" style={{ backgroundColor: 'var(--teu-yellow)', color: 'var(--charcoal)' }}>
+                <a
+                  href="/contact"
+                  className="px-6 py-3 rounded-lg transition-all shadow-md hover:shadow-xl text-center font-bold"
+                  style={{
+                    backgroundColor: 'var(--teu-yellow)',
+                    color: 'var(--charcoal)',
+                  }}
+                >
                   Start With a Discovery Call
                 </a>
-                <a href="/free-tools" className="px-6 py-3 rounded-lg border transition-all hover:bg-gray-50 text-center" style={{ borderColor: 'var(--sage-green)', color: 'var(--sage-green)' }}>
+                <a
+                  href="/free-tools"
+                  className="px-6 py-3 rounded-lg border transition-all hover:bg-gray-50 text-center"
+                  style={{
+                    borderColor: 'var(--sage-green)',
+                    color: 'var(--sage-green)',
+                  }}
+                >
                   Download the Free Reset Guide
                 </a>
               </div>
@@ -177,27 +475,58 @@ export function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-serif mb-4" style={{ color: 'var(--charcoal)' }}>
+              <h2
+                className="text-3xl sm:text-4xl font-serif mb-4"
+                style={{ color: 'var(--charcoal)' }}
+              >
                 What Changes
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div className="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between">
-                <span className="text-gray-400 line-through text-lg">Burned out, overwhelmed, and leading from a place of performance</span>
+                <span className="text-gray-400 line-through text-lg">
+                  Burned out, overwhelmed, and leading from a place of
+                  performance
+                </span>
                 <span className="mx-4 text-gray-300">→</span>
-                <span className="text-lg font-medium" style={{ color: 'var(--sage-green)' }}>Leading with radical self-awareness, clarity, and sustainable systems</span>
+                <span
+                  className="text-lg font-medium"
+                  style={{ color: 'var(--sage-green)' }}
+                >
+                  Leading with radical self-awareness, clarity, and sustainable
+                  systems
+                </span>
               </div>
               <div className="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between">
-                <span className="text-gray-400 line-through text-lg">Navigating a career transition with disorientation and fear</span>
+                <span className="text-gray-400 line-through text-lg">
+                  Navigating a career transition with disorientation and fear
+                </span>
                 <span className="mx-4 text-gray-300">→</span>
-                <span className="text-lg font-medium" style={{ color: 'var(--sage-green)' }}>Divine orientation, aligned to purpose, and walking in unshakeable confidence</span>
+                <span
+                  className="text-lg font-medium"
+                  style={{ color: 'var(--sage-green)' }}
+                >
+                  Divine orientation, aligned to purpose, and walking in
+                  unshakeable confidence
+                </span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://calendly.com/tinamujera/30min" className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
+              <a
+                href="https://calendly.com/tinamujera/30min"
+                className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center"
+                style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}
+              >
                 Book a Session
               </a>
-              <a href="/shop" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-center" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
+              <a
+                href="/shop"
+                className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-center"
+                style={{
+                  borderColor: 'var(--charcoal)',
+                  color: 'var(--charcoal)',
+                }}
+              >
                 Explore ‘Transitions’ (Book)
               </a>
             </div>
@@ -218,39 +547,78 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-serif mb-4" style={{ color: 'var(--charcoal)' }}>
+              <h2
+                className="text-3xl sm:text-4xl font-serif mb-4"
+                style={{ color: 'var(--charcoal)' }}
+              >
                 Featured Work
               </h2>
-              <p className="text-lg" style={{ color: '#374151' }}>Start with the tool that matches your season:</p>
+              <p className="text-lg" style={{ color: '#374151' }}>
+                Start with the tool that matches your season:
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                <img src="/images/book5.jpeg" alt="Transitions Book" className="w-full h-64 object-cover object-top" />
+                <img
+                  src="/images/book5.jpeg"
+                  alt="Transitions Book"
+                  className="w-full h-64 object-cover object-top"
+                />
                 <div className="p-6">
                   <h3 className="text-xl font-medium mb-2">Transitions</h3>
-                  <p className="text-gray-600">From disorientation to divine orientation.</p>
+                  <p className="text-gray-600">
+                    From disorientation to divine orientation.
+                  </p>
                 </div>
               </div>
               <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                <img src="/images/book3.png" alt="NaShe Book" className="w-full h-64 object-cover object-top" />
+                <img
+                  src="/images/book3.png"
+                  alt="NaShe Book"
+                  className="w-full h-64 object-cover object-top"
+                />
                 <div className="p-6">
                   <h3 className="text-xl font-medium mb-2">NaShe</h3>
-                  <p className="text-gray-600">Healing, wholeness and becoming.</p>
+                  <p className="text-gray-600">
+                    Healing, wholeness and becoming.
+                  </p>
                 </div>
               </div>
               <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-                <img src="/images/book4.jpeg" alt="Workbooks" className="w-full h-64 object-cover object-top" />
+                <img
+                  src="/images/book4.jpeg"
+                  alt="Workbooks"
+                  className="w-full h-64 object-cover object-top"
+                />
                 <div className="p-6">
-                  <h3 className="text-xl font-medium mb-2">Workbooks + Resources</h3>
-                  <p className="text-gray-600">Tools for leadership, identity and resilience.</p>
+                  <h3 className="text-xl font-medium mb-2">
+                    Workbooks + Resources
+                  </h3>
+                  <p className="text-gray-600">
+                    Tools for leadership, identity and resilience.
+                  </p>
                 </div>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/shop" className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center font-bold" style={{ backgroundColor: 'var(--teu-yellow)', color: 'var(--charcoal)' }}>
+              <a
+                href="/shop"
+                className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center font-bold"
+                style={{
+                  backgroundColor: 'var(--teu-yellow)',
+                  color: 'var(--charcoal)',
+                }}
+              >
                 Visit the Shop
               </a>
-              <a href="/media" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-white text-center" style={{ borderColor: 'var(--sage-green)', color: 'var(--sage-green)' }}>
+              <a
+                href="/media"
+                className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-white text-center"
+                style={{
+                  borderColor: 'var(--sage-green)',
+                  color: 'var(--sage-green)',
+                }}
+              >
                 Listen to Faith in Action
               </a>
             </div>
@@ -263,33 +631,61 @@ export function Home() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-serif mb-4" style={{ color: 'var(--charcoal)' }}>
+              <h2
+                className="text-3xl sm:text-4xl font-serif mb-4"
+                style={{ color: 'var(--charcoal)' }}
+              >
                 How to Work With Me
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-              <div className="p-6 rounded-xl border-2 hover:shadow-lg transition-all text-center" style={{ borderColor: 'var(--sage-green)' }}>
+              <div
+                className="p-6 rounded-xl border-2 hover:shadow-lg transition-all text-center"
+                style={{ borderColor: 'var(--sage-green)' }}
+              >
                 <h3 className="text-xl font-medium mb-2">1:1 Coaching</h3>
                 <p className="text-gray-500">(60 mins)</p>
               </div>
-              <div className="p-6 rounded-xl border-2 hover:shadow-lg transition-all text-center" style={{ borderColor: 'var(--sage-green)' }}>
-                <h3 className="text-xl font-medium mb-2">Corporate Facilitation</h3>
+              <div
+                className="p-6 rounded-xl border-2 hover:shadow-lg transition-all text-center"
+                style={{ borderColor: 'var(--sage-green)' }}
+              >
+                <h3 className="text-xl font-medium mb-2">
+                  Corporate Facilitation
+                </h3>
                 <p className="text-gray-500">(OCM, EQ, wellness, leadership)</p>
               </div>
-              <div className="p-6 rounded-xl border-2 hover:shadow-lg transition-all text-center" style={{ borderColor: 'var(--sage-green)' }}>
+              <div
+                className="p-6 rounded-xl border-2 hover:shadow-lg transition-all text-center"
+                style={{ borderColor: 'var(--sage-green)' }}
+              >
                 <h3 className="text-xl font-medium mb-2">Healing Circles</h3>
                 <p className="text-gray-500">(Authentically Woman)</p>
               </div>
-              <div className="p-6 rounded-xl border-2 hover:shadow-lg transition-all text-center" style={{ borderColor: 'var(--sage-green)' }}>
+              <div
+                className="p-6 rounded-xl border-2 hover:shadow-lg transition-all text-center"
+                style={{ borderColor: 'var(--sage-green)' }}
+              >
                 <h3 className="text-xl font-medium mb-2">Empower U Academy</h3>
                 <p className="text-gray-500">(Children + teens)</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://calendly.com/tinamujera/30min" className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center" style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}>
+              <a
+                href="https://calendly.com/tinamujera/30min"
+                className="px-8 py-4 rounded-lg transition-all shadow-md hover:shadow-xl text-center"
+                style={{ backgroundColor: 'var(--sage-green)', color: 'white' }}
+              >
                 Book a Discovery Session
               </a>
-              <a href="/contact" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-center" style={{ borderColor: 'var(--charcoal)', color: 'var(--charcoal)' }}>
+              <a
+                href="/contact"
+                className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-gray-50 text-center"
+                style={{
+                  borderColor: 'var(--charcoal)',
+                  color: 'var(--charcoal)',
+                }}
+              >
                 Inquire for Corporate Facilitation
               </a>
             </div>
@@ -298,21 +694,41 @@ export function Home() {
       </section>
 
       {/* SECTION 6 — Closing Invitation */}
-      <section className="py-20 text-center relative overflow-hidden" style={{ backgroundColor: '#2a5934' }}>
-        <img src="/images/watermark.png" alt="" className="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-overlay pointer-events-none" />
+      <section
+        className="py-20 text-center relative overflow-hidden"
+        style={{ backgroundColor: '#2a5934' }}
+      >
+        <img
+          src="/images/watermark.png"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-overlay pointer-events-none"
+        />
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-12 text-white relative z-10">
           <FadeIn>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 leading-tight text-white">
-              You don’t need to push harder.<br /> You need to realign.
+              You don’t need to push harder.
+              <br /> You need to realign.
             </h2>
             <p className="text-xl font-light mb-10 text-gray-300">
               If you’re ready, let’s start.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://calendly.com/tinamujera/30min" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl text-center font-bold" style={{ backgroundColor: 'var(--teu-yellow)', color: 'var(--charcoal)' }}>
+              <a
+                href="https://calendly.com/tinamujera/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl text-center font-bold"
+                style={{
+                  backgroundColor: 'var(--teu-yellow)',
+                  color: 'var(--charcoal)',
+                }}
+              >
                 Book Now
               </a>
-              <a href="/contact" className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-white/10 text-center text-white border-white">
+              <a
+                href="/contact"
+                className="px-8 py-4 rounded-lg border-2 transition-all hover:bg-white/10 text-center text-white border-white"
+              >
                 Contact Me
               </a>
             </div>
