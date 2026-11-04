@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 import { CartProvider } from './context/CartContext';
 import { CartDrawer } from './components/CartDrawer';
 
-const IS_COMING_SOON = true;
+const IS_COMING_SOON = false;
 
 function ComingSoon() {
   return (
